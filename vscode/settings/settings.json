@@ -1,0 +1,18 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "explorer.openEditors.visible": 0,
+    "editor.fontSize": 16,
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontFamily": "Meslo LG M DZ for Powerline",
+    "workbench.iconTheme": "material-icon-theme",
+    "sublimeTextKeymap.promptV3Features": true,
+    "telemetry.enableTelemetry": false,
+    "html.format.wrapAttributes": "force-aligned",
+    "python.pythonPath": "/usr/bin/python",
+    "terminal.integrated.rendererType": "dom",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "vsicons.projectDetection.disableDetect": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.fontFamily": "Hack, monospace",
+    "editor.renderWhitespace": "boundary"
+}

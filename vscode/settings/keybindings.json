@@ -1,0 +1,16 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "ctrl+k ctrl+u",
+        "command": "-editor.action.transformToUppercase",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+k s",
+        "command": "workbench.action.files.saveAll"
+    },
+    {
+        "key": "ctrl+k f",
+        "command": "HookyQR.beautifyFile"
+    }
+]
