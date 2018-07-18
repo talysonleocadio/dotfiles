@@ -3,7 +3,7 @@
     "explorer.openEditors.visible": 0,
     "editor.fontSize": 16,
     "terminal.integrated.fontSize": 15,
-    "terminal.integrated.fontFamily": "Meslo LG M DZ for Powerline",
+    "terminal.integrated.fontFamily": "Hack, monospace",
     "workbench.iconTheme": "material-icon-theme",
     "sublimeTextKeymap.promptV3Features": true,
     "telemetry.enableTelemetry": false,
