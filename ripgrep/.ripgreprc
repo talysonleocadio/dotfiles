@@ -1,0 +1,16 @@
+# Número máximo de colunas mostradas nas pesquisas
+--max-columns=100
+
+# Tipos de arquivos para buscas com o --type
+--type-add
+web:*.{html,css,js}*
+
+# Usando o glob para excluir pastas/arquivos
+--glob=!git/*
+--glob=!**/*.min.js
+
+# Config para cores
+--colors=line:style:bold
+
+# Buscas que incluem insensitive/sensitive case de acordo com o contexto
+--smart-case
