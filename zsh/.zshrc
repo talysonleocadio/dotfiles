@@ -109,11 +109,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# MY ALIASES
-alias pip=pip3
-
 # FZF with RG
 FZF_CTRL_T_COMMAND="rg --files --no-messages --hidden --glob '!.git/'"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
