@@ -12,5 +12,33 @@
     {
         "key": "ctrl+k f",
         "command": "HookyQR.beautifyFile"
+    },
+    {
+        "key": "ctrl+k ctrl+e",
+        "command": "workbench.action.terminal.moveToLineEnd"
+    },
+    {
+        "key": "ctrl+k ctrl+a",
+        "command": "workbench.action.terminal.moveToLineStart"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+alt+down",
+        "command": "-editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+alt+up",
+        "command": "-editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
     }
 ]
