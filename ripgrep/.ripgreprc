@@ -4,6 +4,7 @@
 # Tipos de arquivos para buscas com o --type
 --type-add=web:*.{html,css,js}*
 --type-add=desktop:*.{desktop}
+--type-add=images:*.{png,jpg,jpeg,svg}
 
 # Usando o glob para excluir pastas/arquivos
 --glob=!git/*
