@@ -23,9 +23,15 @@ $install build-essential curl wget vim git
 
 printWhereYouAre "ZSH"
 $install zsh
+chsh -s $(which zsh)
 
 printWhereYouAre "OH-MY-ZSH"
-git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh;
+if [ -d "$HOME/.oh-my-zsh"]; then
+    echo "O diretório já existe removendo..."
+    rm -rf $HOME/.oh-my-zsh
+fi
+
+git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
 
 printWhereYouAre "OH-MY-ZSH: SPACESHIP"
 git clone https://github.com/powerline/fonts.git --depth=1
@@ -41,7 +47,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-
 
 printWhereYouAre "FZF"
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install --no-zsh
+~/.fzf/install
+rm $HOME/.zshrc
 
 printWhereYouAre "RIPGREP"
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.9.0/ripgrep_0.9.0_amd64.deb
@@ -57,4 +64,7 @@ $install code
 rm -rf $HOME/.config/Code/User/*.json
 
 printWhereYouAre "Criando os symlinks"
-python $HOME/.dotfiles/scripts/symlinks.py
+ln -sf ~/.dotfiles/zsh/.zshrc ~/
+ln -sf ~/.dotfiles/tmux/.tmux.conf ~/
+ln -sf ~/.dotfiles/vscode/settings/* ~/.config/Code/User
+ln -sf ~/.dotfiles/ripgrep/.ripgreprc ~/
