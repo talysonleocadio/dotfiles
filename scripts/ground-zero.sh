@@ -32,7 +32,7 @@ printWhereYouAre "OH-MY-ZSH: SPACESHIP"
 git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts
 ./install.sh
-cd $HOME
+cd ..
 rm -rf fonts
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
