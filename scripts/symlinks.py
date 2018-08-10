@@ -6,8 +6,8 @@ import glob
 homePath = os.environ['HOME']
 fileSources = os.path.join(homePath, '.dotfiles')
 
-def sourcePath(path):
-    return os.path.join(fileSources, path)
+def sourcePath(subPath):
+    return os.path.join(fileSources, subPath)
 
 def destPath(subPath):
     return homePath if subPath == 'home' else os.path.join(homePath, subPath)
