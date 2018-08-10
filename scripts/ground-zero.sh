@@ -25,8 +25,7 @@ printWhereYouAre "ZSH"
 $install zsh
 
 printWhereYouAre "OH-MY-ZSH"
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-removeFile $HOME/.zshrc
+git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh;
 
 printWhereYouAre "OH-MY-ZSH: SPACESHIP"
 git clone https://github.com/powerline/fonts.git --depth=1
@@ -34,11 +33,11 @@ cd fonts
 ./install.sh
 cd ..
 rm -rf fonts
-git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+git clone https://github.com/denysdovhan/spaceship-prompt.git $HOME/.oh-my-zsh/custom/themes
+ln -s "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme" "$HOME/.oh-my-zsh/themes/spaceship.zsh-theme"
 
 printWhereYouAre "OH-MY-ZSH: ZSH-SYNTAX-HIGHLIGHT"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
 
 printWhereYouAre "FZF"
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
