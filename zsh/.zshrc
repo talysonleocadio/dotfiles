@@ -76,6 +76,8 @@ SPACESHIP_GIT_BRANCH_COLOR="166"
 plugins=(
   git
   docker-compose
+  zsh-syntax-highlighting
+  tmux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -109,9 +111,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Atribuição do arquivo de configuração para o ripgrep
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
+
 # FZF with RG
 FZF_CTRL_T_COMMAND="rg --files --no-messages --hidden --glob '!.git/'"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
