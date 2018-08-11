@@ -47,7 +47,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-
 
 printWhereYouAre "FZF"
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+~/.fzf/install --all
 rm $HOME/.zshrc
 
 printWhereYouAre "RIPGREP"
