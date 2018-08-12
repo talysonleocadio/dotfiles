@@ -19,7 +19,7 @@ $update
 $upgrade
 
 printWhereYouAre "Instalações básicas"
-$install build-essential curl wget vim git tilda tmux
+$install build-essential curl wget vim git tilda tmux libhidapi-dev
 
 printWhereYouAre "ZSH"
 $install zsh
@@ -63,8 +63,16 @@ $update
 $install code
 rm -rf $HOME/.config/Code/User/*.json
 
+printWhereYouAre "Instalações para o G610"
+git clone https://github.com/MatMoul/g810-led.git ~/.g610-led
+cd ~/.g610-led
+make bin
+sudo make install
+sudo rm /etc/g810-led/profiles
+
 printWhereYouAre "Criando os symlinks"
 ln -sf ~/.dotfiles/zsh/.zshrc ~/
 ln -sf ~/.dotfiles/tmux/.tmux.conf ~/
 ln -sf ~/.dotfiles/vscode/settings/* ~/.config/Code/User
 ln -sf ~/.dotfiles/ripgrep/.ripgreprc ~/
+sudo ln -sf ~/.dotfiles/g610/profile /etc/g810-led
