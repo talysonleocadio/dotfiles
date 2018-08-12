@@ -68,7 +68,8 @@ git clone https://github.com/MatMoul/g810-led.git ~/.g610-led
 cd ~/.g610-led
 make bin
 sudo make install
-sudo rm /etc/g810-led/profiles
+sudo rm /etc/g810-led/profile
+sudo cp $HOME/.g610-led/profile /etc/g810-led
 
 printWhereYouAre "Criando os symlinks"
 ln -sf ~/.dotfiles/zsh/.zshrc ~/
