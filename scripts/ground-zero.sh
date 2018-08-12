@@ -19,7 +19,7 @@ $update
 $upgrade
 
 printWhereYouAre "Instalações básicas"
-$install build-essential curl wget vim git
+$install build-essential curl wget vim git tilda tmux
 
 printWhereYouAre "ZSH"
 $install zsh
@@ -39,8 +39,8 @@ cd fonts
 ./install.sh
 cd ..
 rm -rf fonts
-git clone https://github.com/denysdovhan/spaceship-prompt.git $HOME/.oh-my-zsh/custom/themes
-ln -s "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme" "$HOME/.oh-my-zsh/themes/spaceship.zsh-theme"
+git clone https://github.com/denysdovhan/spaceship-prompt.git $HOME/.oh-my-zsh/custom/themes/spaceship-prompt
+ln -s "$HOME/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme" "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
 
 printWhereYouAre "OH-MY-ZSH: ZSH-SYNTAX-HIGHLIGHT"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
