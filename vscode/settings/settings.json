@@ -13,5 +13,8 @@
     "vsicons.projectDetection.disableDetect": true,
     "vsicons.dontShowNewVersionMessage": true,
     "editor.fontFamily": "Hack, monospace",
-    "editor.renderWhitespace": "boundary"
+    "editor.renderWhitespace": "boundary",
+    "workbench.activityBar.visible": true,
+    "workbench.statusBar.visible": true,
+    "window.menuBarVisibility": "toggle"
 }
