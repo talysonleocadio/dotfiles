@@ -78,6 +78,7 @@ plugins=(
   docker-compose
   zsh-syntax-highlighting
   tmux
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -110,6 +111,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+#Aliases
+alias scheme="rlwrap scheme"
 
 # Atribuição do arquivo de configuração para o ripgrep
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
