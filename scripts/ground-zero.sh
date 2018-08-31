@@ -19,7 +19,7 @@ $update
 $upgrade
 
 printWhereYouAre "Instalações básicas"
-$install build-essential curl wget vim git
+$install build-essential curl wget vim git tilda tmux libhidapi-dev
 
 printWhereYouAre "ZSH"
 $install zsh
@@ -39,8 +39,8 @@ cd fonts
 ./install.sh
 cd ..
 rm -rf fonts
-git clone https://github.com/denysdovhan/spaceship-prompt.git $HOME/.oh-my-zsh/custom/themes
-ln -s "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme" "$HOME/.oh-my-zsh/themes/spaceship.zsh-theme"
+git clone https://github.com/denysdovhan/spaceship-prompt.git $HOME/.oh-my-zsh/custom/themes/spaceship-prompt
+ln -s "$HOME/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme" "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
 
 printWhereYouAre "OH-MY-ZSH: ZSH-SYNTAX-HIGHLIGHT"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
@@ -50,7 +50,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME/.oh-my-zsh/
 
 printWhereYouAre "FZF"
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+~/.fzf/install --all
 rm $HOME/.zshrc
 
 printWhereYouAre "RIPGREP"
@@ -66,8 +66,17 @@ $update
 $install code
 rm -rf $HOME/.config/Code/User/*.json
 
+printWhereYouAre "Instalações para o G610"
+git clone https://github.com/MatMoul/g810-led.git ~/.g610-led
+cd ~/.g610-led
+make bin
+sudo make install
+sudo rm /etc/g810-led/profile
+sudo cp $HOME/.g610-led/profile /etc/g810-led
+
 printWhereYouAre "Criando os symlinks"
 ln -sf ~/.dotfiles/zsh/.zshrc ~/
 ln -sf ~/.dotfiles/tmux/.tmux.conf ~/
 ln -sf ~/.dotfiles/vscode/settings/* ~/.config/Code/User
 ln -sf ~/.dotfiles/ripgrep/.ripgreprc ~/
+sudo ln -sf ~/.dotfiles/g610/profile /etc/g810-led
