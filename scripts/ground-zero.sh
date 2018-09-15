@@ -74,6 +74,19 @@ sudo make install
 sudo rm /etc/g810-led/profile
 sudo cp $HOME/.g610-led/profile /etc/g810-led
 
+printWhereYouAre "Configurações do Neovim"
+mkdir -p ~/.config/nvim/colors
+ln -sf /home/talyson/.dotfiles/nvim/init.vim ~/.config/nvim
+
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+git clone https://github.com/tomasr/molokai.git ~/.config/nvim/colors/molokai
+mv ~/.config/nvim/colors/molokai/colors/molokai.vim ~/.config/nvim/colors
+
+rm -rf ~/.config/nvim/colors/molokai
+vim +'PlugInstall' +qa
+
 printWhereYouAre "Criando os symlinks"
 ln -sf ~/.dotfiles/zsh/.zshrc ~/
 ln -sf ~/.dotfiles/tmux/.tmux.conf ~/
