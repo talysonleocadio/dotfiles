@@ -80,10 +80,8 @@ ln -sf /home/talyson/.dotfiles/nvim/init.vim ~/.config/nvim
 
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 git clone https://github.com/tomasr/molokai.git ~/.config/nvim/colors/molokai
 mv ~/.config/nvim/colors/molokai/colors/molokai.vim ~/.config/nvim/colors
-
 rm -rf ~/.config/nvim/colors/molokai
 vim +'PlugInstall' +qa
 
