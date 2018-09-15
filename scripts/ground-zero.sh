@@ -19,7 +19,7 @@ $update
 $upgrade
 
 printWhereYouAre "Instalações básicas"
-$install build-essential curl wget vim git tilda tmux libhidapi-dev rlwrap  
+$install build-essential curl wget neovim git tilda tmux libhidapi-dev rlwrap
 
 printWhereYouAre "ZSH"
 $install zsh
