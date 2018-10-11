@@ -7,14 +7,27 @@ Plug 'mattn/emmet-vim'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
+Plug 'sjl/badwolf'
+Plug 'sickill/vim-monokai'
+Plug 'tomasr/molokai'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
 set number
 set smartcase
+set ignorecase
 set expandtab
 set tabstop=2
 set shiftwidth=2
 set cursorline 
 
-colorscheme molokai
+syntax enable
+colorscheme monokai
+
+" Key maps
+
+map <C-n> :NERDTreeToggle<CR>
+map <C-t> :Files<CR>
+
