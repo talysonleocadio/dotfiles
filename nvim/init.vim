@@ -31,5 +31,5 @@ colorscheme monokai
 map <C-n> :NERDTreeToggle<CR>
 map <C-t> :Files<CR>
 
-let $FZF_DEFAULT_COMMAND='rg --files --hidden --no-messages --glob="!{**/*.min.js,**/*.min.css,git/*}"'
+let $FZF_DEFAULT_COMMAND='rg --files --hidden --no-messages --glob="!{**/*.min.js,**/*.min.css,.git/*}"'
 
