@@ -10,7 +10,7 @@
         "command": "workbench.action.files.saveAll"
     },
     {
-        "key": "ctrl+k f",
+        "key": "ctrl+k b",
         "command": "HookyQR.beautifyFile"
     },
     {
@@ -40,5 +40,9 @@
         "key": "ctrl+shift+alt+up",
         "command": "-editor.action.copyLinesUpAction",
         "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+k l",
+        "command": "git.openFile"
     }
 ]
