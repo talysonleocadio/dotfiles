@@ -29,7 +29,7 @@ colorscheme monokai
 " Key maps
 
 map <C-n> :NERDTreeToggle<CR>
-map <C-t> :Files<CR>
+map <C-p> :Files<CR>
 
 let $FZF_DEFAULT_COMMAND='rg --files --hidden --no-messages --glob="!{**/*.min.js,**/*.min.css,.git/*}"'
 
