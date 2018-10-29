@@ -12,4 +12,4 @@ set tabstop=2
 set shiftwidth=2
 set cursorline 
 
-colorscheme molokai
+colorscheme monokai
