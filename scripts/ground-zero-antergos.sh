@@ -14,7 +14,7 @@ install="sudo pacman -S --noconfirm"
 
 printWhereYouAre "Atualizando pacotes e instalacoes basicas"
 $update && $install nvim yay ripgrep mediawriter firefox gparted \
-tmux rlwrap hidapi albert zsh code
+tmux rlwrap hidapi albert zsh code anki
 
 printWhereYouAre "Removendo Default configs do Code"
 rm -rf $HOME/.config/Code/User/*.json
