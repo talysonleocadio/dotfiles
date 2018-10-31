@@ -41,14 +41,16 @@ cd ..
 rm -rf fonts
 git clone https://github.com/denysdovhan/spaceship-prompt.git \
 $HOME/.oh-my-zsh/custom/themes/spaceship-prompt
-ln -s $HOME/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme \ 
+ln -s $HOME/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme \
 $HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme
 
 printWhereYouAre "OH-MY-ZSH: ZSH-SYNTAX-HIGHLIGHT"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
+$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 printWhereYouAre "OH-MY-ZSH: ZSH-AUTOSUGGESTIONS"
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions.git \
+$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
 printWhereYouAre "FZF"
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
