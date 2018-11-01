@@ -14,10 +14,10 @@ install="sudo pacman -S --noconfirm"
 aur-install="yay -S --aur --noconfirm"
 
 printWhereYouAre "Atualizando pacotes e instalacoes de pacotes presentes nos repositórios do arch-linux"
-$update && $install neovim yay ripgrep firefox tmux rlwrap hidapi zsh code anki mintstick clipit
+$update && $install neovim yay ripgrep firefox tmux rlwrap hidapi zsh code anki
 
 printWhereYouAre "Instalações AUR (Thanks Community)"
-$aur-install google-chrome spotify albert
+$aur-install google-chrome spotify albert mintstick clipit
 
 printWhereYouAre "Removendo Default configs do Code"
 rm -rf $HOME/.config/Code\ -\ OSS/User/*.json
