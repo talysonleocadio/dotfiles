@@ -23,8 +23,19 @@ printWhereYouAre "Removendo Default configs do Code"
 rm -rf $HOME/.config/Code\ -\ OSS/User/*.json
 
 printWhereYouAre "Removendo default configs do I3"
-removeFile $HOME/.config/i3/config
-removeFile $HOME/.config/i3status/config
+if [ -d "$HOME/.config/i3"]; then
+    echo "O diretório i3 existe, removendo config do i3"
+    removeFile $HOME/.config/i3/config
+else
+    mkdir -p ~/.config/i3
+fi
+
+if [ -d "$HOME/.config/i3status"]; then
+    echo "O diretório i3status existe, removendo config do i3status"
+    removeFile $HOME/.config/i3status/config
+else
+    mkdir -p ~/.config/i3status
+fi
 
 printWhereYouAre "ZSH"
 $install zsh
@@ -78,7 +89,7 @@ ln -sf ~/.dotfiles/vscode/settings/* ~/.config/Code\ -\ OSS/User
 ln -sf ~/.dotfiles/ripgrep/.ripgreprc ~/
 sudo ln -sf ~/.dotfiles/g610/profile /etc/g810-led
 ln -sf ~/.dotfiles/i3/config ~/.config/i3
-ln -sf ~/.dotfiles/i3status/config ~/.config/i3status/config
+ln -sf ~/.dotfiles/i3status/config ~/.config/i3status
 
 printWhereYouAre "Reinicializando o i3"
 i3-msg restart
