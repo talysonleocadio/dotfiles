@@ -227,10 +227,8 @@ bindsym $mod+F7 exec mocp --previous
 bindsym $mod+F8 exec mocp --next
 
 # App shortcuts
-bindsym $mod+w exec "/usr/bin/chromium"
-bindsym $mod+n exec "/usr/bin/thunar"
+bindsym $mod+w exec "/usr/bin/google-chrome-stable"
 bindsym $mod+c exec "/usr/bin/code"
-bindsym $mod+v exec "/usr/bin/vim"
 
 # Moving through workspaces
 bindsym $mod+Tab workspace next
@@ -241,8 +239,5 @@ bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
 
 # Autostart apps
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id "compton -cC"
-exec --no-startup-id nm-applet
-exec --no-startup-id "sleep 2s && kalu"
+exec --no-startup-id "kalu"
 exec --no-startup-id "albert"
-exec --no-startup-id /usr/bin/clipit
