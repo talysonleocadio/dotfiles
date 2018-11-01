@@ -9,28 +9,28 @@ function removeFile {
     rm $1
 }
 
-update="sudo pacman -Syu"
+update="sudo pacman -Syu --noconfirm"
 install="sudo pacman -S --noconfirm"
-aur-install="yay -S --aur --noconfirm"
 
 printWhereYouAre "Atualizando pacotes e instalacoes de pacotes presentes nos repositórios do arch-linux"
 $update && $install neovim yay ripgrep firefox tmux rlwrap hidapi zsh code anki
 
 printWhereYouAre "Instalações AUR (Thanks Community)"
-$aur-install google-chrome spotify albert mintstick clipit
+aurinstall="yay -S --aur --noconfirm"
+$aurinstall google-chrome spotify albert mintstick clipit
 
 printWhereYouAre "Removendo Default configs do Code"
 rm -rf $HOME/.config/Code\ -\ OSS/User/*.json
 
 printWhereYouAre "Removendo default configs do I3"
-if [ -d "$HOME/.config/i3"]; then
+if [ -d "$HOME/.config/i3" ]; then
     echo "O diretório i3 existe, removendo config do i3"
     removeFile $HOME/.config/i3/config
 else
     mkdir -p ~/.config/i3
 fi
 
-if [ -d "$HOME/.config/i3status"]; then
+if [ -d "$HOME/.config/i3status" ]; then
     echo "O diretório i3status existe, removendo config do i3status"
     removeFile $HOME/.config/i3status/config
 else
