@@ -239,5 +239,5 @@ bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
 
 # Autostart apps
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id "kalu"
-exec --no-startup-id "albert"
+exec "albert"
+exec "clipit"
