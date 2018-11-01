@@ -74,7 +74,11 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 removeFile $HOME/.zshrc
 
 printWhereYouAre "Configurações do Neovim"
-mkdir -p ~/.config/nvim
+mkdir -p ~/.config/nvim/colors
+git clone https://github.com/sickill/vim-monokai.git monokai
+mv monokai/colors/monokai.vim ~/.config/nvim/colors
+rm -rf monokai
+
 ln -sf /home/talyson/.dotfiles/nvim/init.vim ~/.config/nvim
 
 # Plug
