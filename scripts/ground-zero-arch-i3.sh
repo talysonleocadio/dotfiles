@@ -74,6 +74,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 removeFile $HOME/.zshrc
 
 printWhereYouAre "Configurações do Neovim"
+mkdir -p ~/.config/nvim
 ln -sf /home/talyson/.dotfiles/nvim/init.vim ~/.config/nvim
 
 # Plug
@@ -90,6 +91,3 @@ ln -sf ~/.dotfiles/ripgrep/.ripgreprc ~/
 sudo ln -sf ~/.dotfiles/g610/profile /etc/g810-led
 ln -sf ~/.dotfiles/i3/config ~/.config/i3
 ln -sf ~/.dotfiles/i3status/config ~/.config/i3status
-
-printWhereYouAre "Reinicializando o i3"
-i3-msg restart
