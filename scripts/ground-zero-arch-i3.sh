@@ -19,8 +19,6 @@ $update && $install neovim yay ripgrep firefox tmux rlwrap hidapi zsh code anki 
 printWhereYouAre "Instalações AUR (Thanks Community)"
 $aur-install google-chrome spotify albert
 
-mkdir -p ~/.config/i3
-
 printWhereYouAre "Removendo Default configs do Code"
 rm -rf $HOME/.config/Code\ -\ OSS/User/*.json
 
