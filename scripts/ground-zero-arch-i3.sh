@@ -42,7 +42,7 @@ $install zsh
 chsh -s $(which zsh)
 
 printWhereYouAre "OH-MY-ZSH"
-if [ -d "$HOME/.oh-my-zsh"]; then
+if [ -d "$HOME/.oh-my-zsh" ]; then
     echo "O diretório já existe removendo..."
     rm -rf $HOME/.oh-my-zsh
 fi
