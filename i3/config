@@ -125,7 +125,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+z exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # lock
 #bindsym $mod+Shift+x exec i3lock --color 475263
-bindsym $mod+Control+l exec "$HOME/Downloads/lock-screen.sh"
+bindsym $mod+Control+l exec "$HOME/.dotfiles/scripts/lock-screen.sh"
 # resize window (you can also use the mouse for that)
 mode "resize" {
     # These bindings trigger as soon as you enter the resize mode
@@ -226,6 +226,10 @@ bindsym $mod+F6 exec mocp --stop
 bindsym $mod+F7 exec mocp --previous
 bindsym $mod+F8 exec mocp --next
 
+# Brightness Control
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp   exec xbacklight -inc 10
+
 # App shortcuts
 bindsym $mod+w exec "/usr/bin/google-chrome-stable"
 bindsym $mod+c exec "/usr/bin/code"
@@ -241,3 +245,6 @@ bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec "albert"
 exec "clipit"
+
+#Background
+exec --no-startup-id feh --bg-fill ~/Pictures/toy_store.jpg
