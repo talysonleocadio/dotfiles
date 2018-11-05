@@ -93,5 +93,6 @@ ln -sf ~/.dotfiles/tmux/.tmux.conf ~/
 ln -sf ~/.dotfiles/vscode/settings/* ~/.config/Code\ -\ OSS/User
 ln -sf ~/.dotfiles/ripgrep/.ripgreprc ~/
 sudo ln -sf ~/.dotfiles/g610/profile /etc/g810-led
+sudo ln -sf ~/.dotfiles/xorg/30-touchpad.confg /etc/X11/xorg.conf.d
 ln -sf ~/.dotfiles/i3/config ~/.config/i3
 ln -sf ~/.dotfiles/i3status/config ~/.config/i3status
