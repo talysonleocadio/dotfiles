@@ -34,6 +34,10 @@ bindsym $mod+Return exec termite
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# Gaps (need 13-gaps)
+gaps inner 3
+gaps outer 3
+
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -180,17 +184,18 @@ client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color       
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    status_command i3status
-    font pango:monospace 9
-
+  status_command i3status
+  font pango:monospace 10
+  strip_workspace_numbers yes
+  height 25 # (i3-gaps)
 	colors {
-        background $bg-color
-        separator #757575
-        #                  border             background         text
-        focused_workspace  $bg-color          $bg-color          $text-color
-        inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-        urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-    }
+    background $bg-color
+    separator #757575
+    #                  border             background         text
+    focused_workspace  $bg-color          $bg-color          $text-color
+      inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+      urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+  }
 }
 
 # floating windows
