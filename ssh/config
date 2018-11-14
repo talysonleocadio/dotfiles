@@ -1,0 +1,7 @@
+Host host
+     HostName 192.168.1.100
+     IdentityFile ~/.ssh/private
+
+Host host
+     HostName 192.168.1.100
+     IdentityFile ~/.ssh/private
