@@ -22,6 +22,9 @@ $aurinstall google-chrome spotify albert mintstick clipit
 printWhereYouAre "Removendo Default configs do Code"
 rm -rf $HOME/.config/Code\ -\ OSS/User/*.json
 
+printWhereYouAre "Albert"
+removeFile ~/.config/albert/albert.conf
+
 printWhereYouAre "Removendo default configs do I3"
 if [ -d "$HOME/.config/i3" ]; then
     echo "O diretório i3 existe, removendo config do i3"
@@ -96,3 +99,4 @@ sudo ln -sf ~/.dotfiles/g610/profile /etc/g810-led
 sudo ln -sf ~/.dotfiles/xorg/30-touchpad.confg /etc/X11/xorg.conf.d
 ln -sf ~/.dotfiles/i3/config ~/.config/i3
 ln -sf ~/.dotfiles/i3status/config ~/.config/i3status
+ln -sf ~/.dotfiles/albert/albert.conf ~/.config/albert
