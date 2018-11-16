@@ -13,7 +13,7 @@ update="sudo pacman -Syu --noconfirm"
 install="sudo pacman -S --noconfirm"
 
 printWhereYouAre "Atualizando pacotes e instalacoes de pacotes presentes nos repositórios do arch-linux"
-$update && $install neovim yay ripgrep firefox tmux rlwrap hidapi zsh code anki feh
+$update && $install neovim yay ripgrep firefox tmux rlwrap hidapi zsh code anki feh gnome-screenshot
 
 printWhereYouAre "Instalações AUR (Thanks Community)"
 aurinstall="yay -S --aur --noconfirm"
