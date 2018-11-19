@@ -1,3 +1,3 @@
-# dotfiles
+# Dotfiles
 
-Este repositório contém todos os meus dotfiles mais importantes, em breve criarei um script para criar os symlinks
+Repositório contendo meus arquivos de configuração, em breve farei uma descrição de todas as configurações usadas.

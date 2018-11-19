@@ -1,5 +1,5 @@
 # Low light profile
 
-a ffffff # Color available on g610
-a 20
+a ffffff # Available color on g610
+a 10
 c # Commit changes
