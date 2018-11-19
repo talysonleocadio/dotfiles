@@ -252,5 +252,6 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec "albert"
 exec "clipit"
 exec --no-startup-id "/usr/bin/dropbox"
+exec --no-startup-id "redshift"
 #Background
 exec --no-startup-id feh --bg-fill ~/Pictures/toy_store.jpg
