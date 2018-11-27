@@ -255,5 +255,5 @@ exec --no-startup-id "/usr/bin/dropbox"
 exec --no-startup-id "redshift"
 #Background
 exec --no-startup-id feh --bg-fill ~/Pictures/toy_store.jpg
-exec --no-startup-id xautolock -time 5 -lock "$HOME/.dotfiles/scripts/lock-screen.sh"
+exec --no-startup-id xautolock -time 5 -locker "$HOME/.dotfiles/scripts/lock-screen.sh"
 
