@@ -73,13 +73,13 @@ scrollback_lines = 10000
 #color15 = #ffffff
 
 [colors]
-background = "#1a1a1a"
-cursor = "#f6f7ec"
-foreground = "#c4c5b5"
+background = #1a1a1a
+cursor = #f6f7ec
+foreground = #c4c5b5
 color0 =  #1a1a1a
 color1 = #f4005f
 color2 = #98e024
-color3 = #fa8419
+color3 = #ffcc00
 color4 = #9d65ff
 color5 = #f4005f
 color6 = #58d1eb
