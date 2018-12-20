@@ -13,11 +13,11 @@ update="sudo pacman -Syu --noconfirm"
 install="sudo pacman -S --noconfirm"
 
 printWhereYouAre "Atualizando pacotes e instalacoes de pacotes presentes nos repositórios do arch-linux"
-$update && $install neovim yay ripgrep firefox tmux rlwrap hidapi zsh code anki feh gnome-screenshot
+$update && $install neovim yay ripgrep firefox tmux rlwrap hidapi zsh code anki feh gnome-screenshot redshift imagemagick xautolock i3-gaps bluez blueberry
 
 printWhereYouAre "Instalações AUR (Thanks Community)"
 aurinstall="yay -S --aur --noconfirm"
-$aurinstall google-chrome spotify albert mintstick clipit
+$aurinstall google-chrome spotify mintstick clipit albert
 
 printWhereYouAre "Removendo Default configs do Code"
 rm -rf $HOME/.config/Code\ -\ OSS/User/*.json
@@ -96,7 +96,8 @@ ln -sf ~/.dotfiles/tmux/.tmux.conf ~/
 ln -sf ~/.dotfiles/vscode/settings/* ~/.config/Code\ -\ OSS/User
 ln -sf ~/.dotfiles/ripgrep/.ripgreprc ~/
 sudo ln -sf ~/.dotfiles/g610/profile /etc/g810-led
-sudo ln -sf ~/.dotfiles/xorg/30-touchpad.confg /etc/X11/xorg.conf.d
+sudo ln -sf ~/.dotfiles/xorg/30-touchpad.conf /etc/X11/xorg.conf.d
 ln -sf ~/.dotfiles/i3/config ~/.config/i3
 ln -sf ~/.dotfiles/i3status/config ~/.config/i3status
 ln -sf ~/.dotfiles/albert/albert.conf ~/.config/albert
+

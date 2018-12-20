@@ -18,7 +18,7 @@ general {
 
 order += "volume master"
 order += "disk /"
-#order += "disk /data"
+order += "disk /home"
 #order += "run_watch DHCP"
 #order += "ipv6"
 #order += "run_watch VPN"
@@ -81,18 +81,18 @@ cpu_temperature 0 {
 }
 
 disk "/" {
-    format = " %free"
+    format = " %free"
     prefix_type	= custom
     low_threshold = 20
     threshold_type = percentage_avail
 }
 
-#disk "/data" {
-#    format = " %avail"
-#    prefix_type = custom
-#    low_threshold = 20
-#    threshold_type = percentage_avail
-#}
+disk "/home" {
+    format = " %free"
+    prefix_type = custom
+    low_threshold = 20
+    threshold_type = percentage_avail
+}
 
 #disk "/data" {
 #        format = " %avail"
