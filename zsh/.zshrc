@@ -122,4 +122,3 @@ export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 FZF_CTRL_T_COMMAND="rg --files --no-messages --hidden --glob '!.git/'"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
