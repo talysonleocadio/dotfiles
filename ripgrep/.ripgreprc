@@ -1,5 +1,5 @@
 # Número máximo de colunas mostradas nas pesquisas
---max-columns=100
+--max-columns=200
 
 # Tipos de arquivos para buscas com o --type
 --type-add=web:*.{html,css,js}*
