@@ -129,7 +129,8 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+z exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # lock
 #bindsym $mod+Shift+x exec i3lock --color 475263
-bindsym $mod+Control+l exec "$HOME/.dotfiles/scripts/lock-screen.sh"
+# bindsym $mod+Control+l exec "$HOME/.dotfiles/scripts/lock-screen.sh"
+bindsym $mod+Control+l exec cinnamon-screensaver-command -l 
 # resize window (you can also use the mouse for that)
 mode "resize" {
     # These bindings trigger as soon as you enter the resize mode
@@ -256,5 +257,7 @@ exec --no-startup-id "/usr/bin/dropbox"
 exec --no-startup-id "redshift"
 #Background
 exec --no-startup-id feh --bg-fill ~/Pictures/toy_store.jpg
-exec --no-startup-id xautolock -time 5 -locker "$HOME/.dotfiles/scripts/lock-screen.sh"
+# exec --no-startup-id xautolock -time 5 -locker "$HOME/.dotfiles/scripts/lock-screen.sh"
+
+exec --no-startup-id xautolock -time 5 -locker cinnamon-screensaver-command -l 
 
