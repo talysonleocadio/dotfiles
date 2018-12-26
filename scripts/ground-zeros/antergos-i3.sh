@@ -13,17 +13,17 @@ update="sudo pacman -Syu --noconfirm"
 install="sudo pacman -S --noconfirm"
 
 printWhereYouAre "Atualizando pacotes e instalacoes de pacotes presentes nos repositórios do arch-linux"
-$update && $install neovim yay ripgrep firefox tmux rlwrap hidapi zsh code anki feh gnome-screenshot redshift imagemagick xautolock i3-gaps bluez blueberry
+$update && $install neovim yay ripgrep firefox tmux rlwrap hidapi zsh code anki feh gnome-screenshot redshift imagemagick xautolock i3-gaps bluez blueberry emacs
 
 printWhereYouAre "Instalações AUR (Thanks Community)"
 aurinstall="yay -S --aur --noconfirm"
-$aurinstall google-chrome spotify mintstick clipit albert
+$aurinstall google-chrome spotify mintstick clipit albert i3-cinnamon mint-y-icons mint-backgrounds-tara nodejs-n
+
+printWhereYouAre "Instalação do nodejs lts"
+n lts
 
 printWhereYouAre "Removendo Default configs do Code"
 rm -rf $HOME/.config/Code\ -\ OSS/User/*.json
-
-printWhereYouAre "Albert"
-removeFile ~/.config/albert/albert.conf
 
 printWhereYouAre "Removendo default configs do I3"
 if [ -d "$HOME/.config/i3" ]; then
@@ -90,6 +90,9 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 nvim +'PlugInstall' +qa
 
+printWhereYouAre "Pastas de configuração para termite e redshift"
+mkdir -p ~/.config/{redshift,termite}
+
 printWhereYouAre "Criando os symlinks"
 ln -sf ~/.dotfiles/zsh/.zshrc ~/
 ln -sf ~/.dotfiles/tmux/.tmux.conf ~/
@@ -100,4 +103,5 @@ sudo ln -sf ~/.dotfiles/xorg/30-touchpad.conf /etc/X11/xorg.conf.d
 ln -sf ~/.dotfiles/i3/config ~/.config/i3
 ln -sf ~/.dotfiles/i3status/config ~/.config/i3status
 ln -sf ~/.dotfiles/albert/albert.conf ~/.config/albert
-
+ln -sf ~/.dotfiles/redshift/redshift.conf ~/.config/redshift
+ln -sf ~/.dotfiles/termite/config ~/.config/termite
