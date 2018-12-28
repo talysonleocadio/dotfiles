@@ -48,7 +48,7 @@ values."
      python
      docker
      html
-     (shell :variables shell-default-shell 'term)
+     shell
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -70,7 +70,7 @@ values."
      pdf-tools
      tabbar
      php-extras
-    )
+     )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -315,7 +315,7 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-)
+  )
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
@@ -325,7 +325,7 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (editorconfig-mode 1)
-)
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.

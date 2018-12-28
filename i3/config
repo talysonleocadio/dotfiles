@@ -130,7 +130,7 @@ bindsym $mod+Shift+z exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # lock
 #bindsym $mod+Shift+x exec i3lock --color 475263
 # bindsym $mod+Control+l exec "$HOME/.dotfiles/scripts/lock-screen.sh"
-bindsym $mod+Control+l exec cinnamon-screensaver-command -l 
+bindsym $mod+Control+l exec cinnamon-screensaver-command -l
 # resize window (you can also use the mouse for that)
 mode "resize" {
     # These bindings trigger as soon as you enter the resize mode
@@ -162,7 +162,7 @@ mode "$shutdown" {
     bindsym y exec --no-startup-id systemctl poweroff -i, mode "default"
     bindsym n mode "default"
     bindsym Return mode "default"
-    bindsym Escape mode "default" 
+    bindsym Escape mode "default"
 }
 
 bindsym $mod+End mode "$shutdown"
@@ -203,7 +203,6 @@ bar {
 # floating windows
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Kalu"] floating enable
-
 ## Multimedia Keys
 
 # volume
@@ -259,5 +258,4 @@ exec --no-startup-id "redshift"
 exec --no-startup-id feh --bg-fill ~/Pictures/toy_store.jpg
 # exec --no-startup-id xautolock -time 5 -locker "$HOME/.dotfiles/scripts/lock-screen.sh"
 
-exec --no-startup-id xautolock -time 5 -locker cinnamon-screensaver-command -l 
-
+exec --no-startup-id xautolock -time 5 -locker "cinnamon-screensaver-command -l"
