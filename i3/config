@@ -126,11 +126,11 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+z exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-# lock
-#bindsym $mod+Shift+x exec i3lock --color 475263
+bindsym $mod+Shift+z exec "cinnamon-session-quit"
+# lock and shutdown
+bindsym $mod+Shift+x exec "cinnamon-session-quit --power-off"
 # bindsym $mod+Control+l exec "$HOME/.dotfiles/scripts/lock-screen.sh"
-bindsym $mod+Control+l exec cinnamon-screensaver-command -l
+bindsym $mod+Control+l exec "cinnamon-screensaver-command -l"
 # resize window (you can also use the mouse for that)
 mode "resize" {
     # These bindings trigger as soon as you enter the resize mode
