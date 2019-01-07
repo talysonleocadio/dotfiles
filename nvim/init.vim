@@ -15,6 +15,10 @@ Plug 'townk/vim-autoclose'
 Plug 'leafgarland/typescript-vim'
 Plug 'valloric/youcompleteme', {'do': './install.py --tern-completer'}
 Plug 'quramy/tsuquyomi'
+Plug 'tpope/vim-commentary'
+Plug 'stanangeloff/php.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-abolish'
 
 call plug#end()
 
