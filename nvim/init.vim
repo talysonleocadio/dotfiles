@@ -52,4 +52,5 @@ let g:ycm_enable_diagnostic_highlighting = 0
 
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
-
+let g:ale_fixers = {'javascript': ['eslint']}
+let g:ale_linters = {'javascript': ['eslint']}
