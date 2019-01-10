@@ -11,7 +11,7 @@ Plug 'sjl/badwolf'
 Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
-Plug 'townk/vim-autoclose'
+Plug 'jiangmiao/auto-pairs'
 Plug 'leafgarland/typescript-vim'
 Plug 'valloric/youcompleteme', {'do': './install.py --tern-completer'}
 Plug 'quramy/tsuquyomi'
@@ -19,6 +19,7 @@ Plug 'tpope/vim-commentary'
 Plug 'stanangeloff/php.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-abolish'
+Plug 'pangloss/vim-javascript'
 
 call plug#end()
 
