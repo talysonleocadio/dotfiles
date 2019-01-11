@@ -20,6 +20,7 @@ Plug 'stanangeloff/php.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-abolish'
 Plug 'pangloss/vim-javascript'
+Plugin 'ap/vim-css-color'
 
 call plug#end()
 
