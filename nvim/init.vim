@@ -22,6 +22,7 @@ Plug 'tpope/vim-abolish'
 Plug 'pangloss/vim-javascript'
 Plug 'ap/vim-css-color'
 Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.vim'
 
 call plug#end()
 
