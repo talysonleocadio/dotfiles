@@ -1,6 +1,6 @@
 # Dotfiles
 
-Esse repositório contém as configurações dos principais programas que uso em meu dia-a-dia, para mais detalhes sobre cada um dos programas, é so clicar nos links da lista abaixo:
+Esse repositório contém as configurações dos principais programas que uso em meu dia-a-dia, para mais detalhes sobre cada um dos programas, é so clicar nos links na lista abaixo:
 
 ### Configurações
 
@@ -18,3 +18,5 @@ Meus dotfiles contém configurações para os seguintes programas:
   - [ Vscode ](vscode/settings/settings.json)
   - [ Xorg (Configurações para I3wm) ](xorg/30-touchpad.conf)
   - [ ZSH (ZShell) e Oh-my-zsh (Plugin manager) ](zsh/.zshrc)
+
+Breve um criarei arquivos .md para todos os programas listados acima.
