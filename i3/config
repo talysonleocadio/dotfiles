@@ -237,7 +237,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym XF86MonBrightnessUp   exec xbacklight -inc 10
 
 # App shortcuts
-bindsym $mod+w exec "/usr/bin/chromium"
+bindsym $mod+w exec "python3 ~/.dotfiles/scripts/chromium-execution.py"
 bindsym $mod+c exec "/usr/bin/code"
 bindsym Print exec "/usr/bin/gnome-screenshot -i"
 
