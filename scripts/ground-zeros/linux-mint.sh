@@ -27,7 +27,7 @@ $update
 $upgrade
 
 log "Instalações básicas"
-$install build-essential curl wget neovim tilda tmux libhidapi-dev rlwrap emacs code indicator-kdeconnect
+$install build-essential curl wget neovim tilda tmux libhidapi-dev rlwrap emacs code indicator-kdeconnect compton
 
 log "i3 (Gaps)"
 git clone https://www.github.com/Airblader/i3 i3-gaps
