@@ -18,5 +18,6 @@ Meus dotfiles contém configurações para os seguintes programas:
   - [ Vscode ](vscode/settings/settings.json)
   - [ Xorg (Configurações para I3wm) ](xorg/30-touchpad.conf)
   - [ ZSH (ZShell) e Oh-my-zsh (Plugin manager) ](zsh/.zshrc)
+  - [ Compton ](compton/compton.conf)
 
 Breve um criarei arquivos .md para todos os programas listados acima.
