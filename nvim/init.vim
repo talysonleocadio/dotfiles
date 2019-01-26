@@ -88,3 +88,6 @@ let g:lightline = {
       \     'linter_ok': 'left',
       \ }
       \ }
+
+" Editorconfig
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
