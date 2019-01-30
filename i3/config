@@ -238,7 +238,6 @@ bindsym XF86MonBrightnessUp   exec xbacklight -inc 10
 
 # App shortcuts
 bindsym $mod+w exec "python3 ~/.dotfiles/scripts/chromium-execution.py"
-bindsym $mod+c exec "/usr/bin/code"
 bindsym Print exec "/usr/bin/spectacle"
 
 # Moving through workspaces
@@ -249,13 +248,13 @@ bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
 
 # Autostart apps
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 exec "albert"
 exec "clipit"
 exec --no-startup-id "/usr/bin/dropbox"
-exec --no-startup-id "redshift"
+exec "redshift"
 #Background
-exec --no-startup-id feh --bg-fill ~/Pictures/toy_store.jpg
+exec --no-startup-id "feh --bg-fill ~/Pictures/toy_store.jpg"
 # exec --no-startup-id xautolock -time 5 -locker "$HOME/.dotfiles/scripts/lock-screen.sh"
 
 exec --no-startup-id xautolock -time 5 -locker "cinnamon-screensaver-command -l"
