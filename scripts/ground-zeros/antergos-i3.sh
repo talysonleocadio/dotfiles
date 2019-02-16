@@ -13,17 +13,14 @@ update="sudo pacman -Syu --noconfirm"
 install="sudo pacman -S --noconfirm"
 
 log "Atualizando pacotes e instalacoes de pacotes presentes nos repositórios do arch-linux"
-$update && $install neovim yay ripgrep firefox tmux rlwrap hidapi zsh code anki feh gnome-screenshot redshift imagemagick xautolock i3-gaps bluez blueberry emacs compton
+$update && $install neovim yay ripgrep firefox tmux rlwrap hidapi zsh anki feh redshift imagemagick xautolock i3-gaps bluez blueberry emacs compton python-pip
 
 log "Instalações AUR (Thanks Community)"
 aurinstall="yay -S --aur --noconfirm"
-$aurinstall spotify mintstick clipit albert i3-cinnamon mint-y-icons mint-backgrounds-tara nodejs-n
+$aurinstall spotify mintstick clipit albert i3-cinnamon mint-y-icons mint-backgrounds-tara nodejs-n g810-led-git spectacle
 
 log "Instalação do nodejs lts"
-n lts
-
-log "Removendo Default configs do Code"
-rm -rf $HOME/.config/Code\ -\ OSS/User/*.json
+sudo n lts
 
 log "Removendo default configs do I3"
 if [ -d "$HOME/.config/i3" ]; then
@@ -77,11 +74,6 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 removeFile $HOME/.zshrc
 
 log "Configurações do Neovim"
-mkdir -p ~/.config/nvim/colors
-git clone https://github.com/sickill/vim-monokai.git monokai
-mv monokai/colors/monokai.vim ~/.config/nvim/colors
-rm -rf monokai
-
 ln -sf /home/talyson/.dotfiles/nvim/init.vim ~/.config/nvim
 
 # Plug
@@ -96,12 +88,11 @@ mkdir -p ~/.config/{redshift,termite}
 log "Criando os symlinks"
 ln -sf ~/.dotfiles/zsh/.zshrc ~/
 ln -sf ~/.dotfiles/tmux/.tmux.conf ~/
-ln -sf ~/.dotfiles/vscode/settings/* ~/.config/Code\ -\ OSS/User
 ln -sf ~/.dotfiles/ripgrep/.ripgreprc ~/
 sudo ln -sf ~/.dotfiles/g610/profile /etc/g810-led
 sudo ln -sf ~/.dotfiles/xorg/30-touchpad.conf /etc/X11/xorg.conf.d
 ln -sf ~/.dotfiles/i3/config ~/.config/i3
 ln -sf ~/.dotfiles/i3status/config ~/.config/i3status
 ln -sf ~/.dotfiles/albert/albert.conf ~/.config/albert
-ln -sf ~/.dotfiles/redshift/redshift.conf ~/.config/redshift
+cp ~/.dotfiles/redshift/redshift.conf ~/.config/redshift
 ln -sf ~/.dotfiles/termite/config ~/.config/termite
