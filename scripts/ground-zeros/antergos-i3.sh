@@ -13,7 +13,7 @@ update="sudo pacman -Syu --noconfirm"
 install="sudo pacman -S --noconfirm"
 
 log "Atualizando pacotes e instalacoes de pacotes presentes nos repositórios do arch-linux"
-$update && $install neovim yay ripgrep firefox tmux rlwrap hidapi zsh anki feh redshift imagemagick xautolock i3-gaps bluez blueberry emacs compton python-pip
+$update && $install neovim yay ripgrep firefox tmux rlwrap hidapi zsh anki feh redshift imagemagick xautolock i3-gaps bluez blueberry emacs compton python-pip xclip
 
 log "Instalações AUR (Thanks Community)"
 aurinstall="yay -S --aur --noconfirm"
