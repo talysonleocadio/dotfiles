@@ -1,4 +1,4 @@
-  call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -8,23 +8,27 @@ Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 Plug 'sjl/badwolf'
-Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
-Plug 'leafgarland/typescript-vim'
-Plug 'valloric/youcompleteme', {'do': 'python3 install.py --ts-completer'}
 Plug 'quramy/tsuquyomi'
 Plug 'tpope/vim-commentary'
-Plug 'stanangeloff/php.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-abolish'
-Plug 'pangloss/vim-javascript'
 Plug 'ap/vim-css-color'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.vim'
 Plug 'maximbaz/lightline-ale'
 Plug 'mhinz/vim-startify'
+Plug 'sheerun/vim-polyglot'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'lvht/phpcd.vim'
+Plug 'mhartington/nvim-typescript' " See the README.md on source project for more details
+Plug 'wokalski/autocomplete-flow'
+" For func argument completion
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
 
 call plug#end()
 
@@ -61,7 +65,7 @@ let g:ycm_enable_diagnostic_highlighting = 0
 
 " Ale
 let g:ale_fixers = {'javascript': ['eslint']}
-let g:ale_linters = {'javascript': ['eslint']}
+let g:ale_linters = {'javascript': ['eslint'], 'python': ['flake8']}
 
 " lightline
 let g:lightline = {
@@ -103,3 +107,7 @@ endfunction
 
 " vim-startify
 let g:startify_bookmarks = [{'d': '~/.dotfiles/nvim/init.vim'}, {'z':'~/.zshrc'}]
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+let g:neosnippet#enable_completed_snippet = 1
