@@ -1,4 +1,4 @@
-call plug#begin('~/.local/share/nvim/plugged')
+  call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -13,7 +13,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'leafgarland/typescript-vim'
-Plug 'valloric/youcompleteme', {'do': './install.py --ts-completer'}
+Plug 'valloric/youcompleteme', {'do': 'python3 install.py --ts-completer'}
 Plug 'quramy/tsuquyomi'
 Plug 'tpope/vim-commentary'
 Plug 'stanangeloff/php.vim'
@@ -24,6 +24,7 @@ Plug 'ap/vim-css-color'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.vim'
 Plug 'maximbaz/lightline-ale'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
@@ -37,6 +38,7 @@ set cursorline
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,space:•
 set list
 set completeopt-=preview
+set autoindent
 
 syntax enable
 colorscheme badwolf 
@@ -62,7 +64,6 @@ let g:ale_fixers = {'javascript': ['eslint']}
 let g:ale_linters = {'javascript': ['eslint']}
 
 " lightline
-
 let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
@@ -91,3 +92,14 @@ let g:lightline = {
 
 " Editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" Xclip copy/paste
+function! ClipboardYank()
+  call system('xclip -i -selection clipboard', @@)
+endfunction
+function! ClipboardPaste()
+  let @@ = system('xclip -o -selection clipboard')
+endfunction
+
+" vim-startify
+let g:startify_bookmarks = [{'d': '~/.dotfiles/nvim/init.vim'}, {'z':'~/.zshrc'}]
