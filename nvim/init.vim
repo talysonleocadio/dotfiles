@@ -13,7 +13,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'leafgarland/typescript-vim'
-Plug 'valloric/youcompleteme', {'do': './install.py --tern-completer'}
+Plug 'valloric/youcompleteme', {'do': './install.py --ts-completer'}
 Plug 'quramy/tsuquyomi'
 Plug 'tpope/vim-commentary'
 Plug 'stanangeloff/php.vim'
