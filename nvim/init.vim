@@ -23,7 +23,6 @@ Plug 'mhinz/vim-startify'
 Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'deoplete-plugins/deoplete-jedi'
-Plug 'lvht/phpcd.vim'
 Plug 'mhartington/nvim-typescript' " See the README.md on source project for more details
 Plug 'wokalski/autocomplete-flow'
 " For func argument completion
@@ -65,7 +64,17 @@ let g:ycm_enable_diagnostic_highlighting = 0
 
 " Ale
 let g:ale_fixers = {'javascript': ['eslint']}
-let g:ale_linters = {'javascript': ['eslint'], 'python': ['flake8']}
+let g:ale_linters = { 
+  \ 'javascript': ['eslint'], 
+  \ 'python': ['flake8'], 
+  \ 'php': [ 'phpcs', 'langserver'],
+  \ 'vim': ['vint']
+\}
+
+let g:ale_php_langserver_use_global = 1
+let g:ale_php_langserver_executable = $HOME.'/.config/composer/vendor/bin/php-language-server.php'
+let g:ale_php_phpcs_use_global = 1
+let g:ale_php_phpcs_executable = $HOME.'/.config/composer/vendor/bin/phpcs'
 
 " lightline
 let g:lightline = {
