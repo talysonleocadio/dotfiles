@@ -12,8 +12,12 @@ function removeFile {
 update="sudo pacman -Syu --noconfirm"
 install="sudo pacman -S --noconfirm"
 
+log "Otimização dos mirrors"
+$install reflector
+sudo reflector --protocol https --sort score --latest 5 --save /etc/pacman.d/mirrorlist
+
 log "Atualizando pacotes e instalacoes de pacotes presentes nos repositórios do arch-linux"
-$update && $install neovim yay ripgrep firefox tmux rlwrap hidapi zsh anki feh redshift imagemagick xautolock i3-gaps bluez blueberry emacs compton python-pip xclip
+$update && $install neovim yay ripgrep firefox tmux rlwrap hidapi zsh anki feh redshift imagemagick xautolock i3-gaps bluez blueberry emacs compton python-pip xclip 
 
 log "Instalações AUR (Thanks Community)"
 aurinstall="yay -S --aur --noconfirm"
