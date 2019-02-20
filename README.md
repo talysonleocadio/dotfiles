@@ -13,7 +13,7 @@ Meus dotfiles contém configurações para os seguintes programas:
   - [ Redshift (Arquivo de configuração para usar o redshift offline) ](redshift/redshift.conf)
   - [ Ripgrep ](ripgrep/.ripgreprc)
   - [ Spacemacs ](spacemacs/.spacemacs)
-  - [ Exemplo de arquivo de configuração do OpenSSH ](ssh/config)
+  - [ OpenSSH (Modelo para o arquivo de configuração) ](ssh/config)
   - [ Termite ](termite/config)
   - [ Vscode ](vscode/settings/settings.json)
   - [ Xorg (Configurações de touchpad para o I3wm) ](xorg/30-touchpad.conf)
