@@ -2,7 +2,7 @@
 #allow_bold = true
 #audible_bell = false
 #bold_is_bright = true
-#clickable_url = true
+clickable_url = true
 #dynamic_title = true
 font = Hack 10
 #fullscreen = true
@@ -36,7 +36,7 @@ scrollback_lines = 10000
 #size_hints = false
 
 # "off", "left" or "right"
-#scrollbar = off
+scrollbar = off
 
 #[colors]
 # If both of these are unset, cursor falls back to the foreground color,
