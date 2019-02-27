@@ -5,10 +5,6 @@ function log {
     echo \[$1\]
 }
 
-function removeFile {
-    rm $1
-}
-
 update="sudo pacman -Syu --noconfirm"
 install="sudo pacman -S --noconfirm"
 
@@ -29,31 +25,17 @@ sudo n lts
 log "Removendo default configs do I3"
 if [ -d "$HOME/.config/i3" ]; then
     echo "O diretório i3 existe, removendo config do i3"
-    removeFile $HOME/.config/i3/config
+    rm $HOME/.config/i3/config
 else
     mkdir -p ~/.config/i3
 fi
 
 if [ -d "$HOME/.config/i3status" ]; then
     echo "O diretório i3status existe, removendo config do i3status"
-    removeFile $HOME/.config/i3status/config
+    rm $HOME/.config/i3status/config
 else
     mkdir -p ~/.config/i3status
 fi
-
-
-log "Configurações do Neovim"
-sudo pip install neovim
-mkdir -p ~/.config/nvim/colors
-git clone https://github.com/sickill/vim-monokai.git monokai
-
-ln -sf /home/talyson/.dotfiles/nvim/init.vim ~/.config/nvim
-
-# Plug
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-nvim +'PlugInstall' +qa
 
 log "Pastas de configuração para termite e redshift"
 mkdir -p ~/.config/{redshift,termite}
