@@ -41,10 +41,6 @@ else
     mkdir -p ~/.config/i3status
 fi
 
-log "FZF"
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install --all
-removeFile $HOME/.zshrc
 
 log "Configurações do Neovim"
 sudo pip install neovim
