@@ -13,29 +13,14 @@ $install reflector
 sudo reflector --protocol https --sort score --latest 5 --save /etc/pacman.d/mirrorlist
 
 log "Atualizando pacotes e instalacoes de pacotes presentes nos repositórios do arch-linux"
-$update && $install yay ripgrep firefox tmux rlwrap hidapi zsh anki feh redshift imagemagick xautolock i3-gaps bluez blueberry compton xclip 
+$update && $install yay ripgrep firefox tmux rlwrap hidapi zsh anki redshift xclip 
 
 log "Instalações AUR"
 yay="yay -S --aur --noconfirm"
-$yay spotify mintstick clipit albert i3-cinnamon mint-y-icons mint-backgrounds-tara g810-led-git spectacle
-
-log "Removendo default configs do I3"
-if [ -d "$HOME/.config/i3" ]; then
-  echo "O diretório i3 existe, removendo config do i3"
-  rm $HOME/.config/i3/config
-else
-  mkdir -p ~/.config/i3
-fi
-
-if [ -d "$HOME/.config/i3status" ]; then
-  echo "O diretório i3status existe, removendo config do i3status"
-  rm $HOME/.config/i3status/config
-else
-  mkdir -p ~/.config/i3status
-fi
+$yay spotify mintstick clipit albert g810-led-git
 
 log "Pastas de configuração para termite e redshift"
-mkdir -p ~/.config/{redshift,termite}
+mkdir -p ~/.config/{redshift,termite};
 
 log "Criando os symlinks"
 ln -sf ~/.dotfiles/zsh/.zshrc ~/
