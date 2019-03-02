@@ -2,7 +2,6 @@
 
 log "NEOVIM: Instalação de dependências"
 
-sudo npm i -g neovim
 yay -S editorconfig-core-c
 pip install --user neovim
 sudo npm i -g neovim
