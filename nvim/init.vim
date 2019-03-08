@@ -38,31 +38,31 @@ set ignorecase
 set expandtab
 set tabstop=2
 set shiftwidth=2
-set cursorline 
+set cursorline
 set completeopt-=preview
 set autoindent
-set ts=2 sw=2 
+set ts=2 sw=2
 
 syntax enable
-colorscheme badwolf 
+colorscheme badwolf
+
+" Autocommands
+autocmd BufWrite * %s/\s\+$//e
 
 " Key maps
 map <C-n> :NERDTreeToggle<CR>
-map <C-p> :Files<CR>
+map <C-t> :Files<CR>
 noremap <esc> :noh<CR>
-noremap <F5> :set list!<CR>
-inoremap <F5> <C-o>:set list!<CR>
-cnoremap <F5> <C-c>:set list!<CR>
 
-" Fzf_vim 
+" Fzf_vim
 let $FZF_DEFAULT_COMMAND='rg --files --hidden --no-messages --glob="!{**/*.min.js,**/*.min.css,.git/*}"'
 
 " Ale
 let g:ale_linters_explicit = 1
 let g:ale_fixers = {'javascript': ['eslint']}
-let g:ale_linters = { 
-  \ 'javascript': ['eslint'], 
-  \ 'python': ['flake8'], 
+let g:ale_linters = {
+  \ 'javascript': ['eslint'],
+  \ 'python': ['flake8'],
   \ 'php': [ 'phpcs', 'langserver'],
   \ 'vim': ['vint']
 \}
