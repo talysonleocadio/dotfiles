@@ -21,11 +21,9 @@ Plug 'iamcco/markdown-preview.vim'
 Plug 'maximbaz/lightline-ale'
 Plug 'mhinz/vim-startify'
 Plug 'sheerun/vim-polyglot'
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'deoplete-plugins/deoplete-jedi'
-Plug 'mhartington/nvim-typescript', {'do': ':UpdateRemotePlugins'} " See the README.md on source project for more details
-Plug 'wokalski/autocomplete-flow'
-" For func argument completion
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'} " See the README.md on source project for more details
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'nathanaelkane/vim-indent-guides'
