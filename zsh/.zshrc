@@ -118,6 +118,7 @@ source $ZSH/oh-my-zsh.sh
 
 #Aliases
 alias scheme="rlwrap scheme"
+alias vim="nvim"
 
 # Atribuição do arquivo de configuração para o ripgrep
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
