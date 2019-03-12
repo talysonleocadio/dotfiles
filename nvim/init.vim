@@ -27,6 +27,7 @@ Plug 'mhartington/nvim-typescript', {'do': './install.sh'} " See the README.md o
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
