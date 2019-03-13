@@ -52,6 +52,8 @@ autocmd BufWrite * %s/\s\+$//e
 map <C-n> :NERDTreeToggle<CR>
 map <C-t> :Files<CR>
 noremap <esc> :noh<CR>
+nnoremap <silent> <C-N> :bp<CR>
+nnoremap <silent> <C-M> :bn<CR>
 
 " Fzf_vim
 let $FZF_DEFAULT_COMMAND='rg --files --hidden --no-messages --glob="!{**/*.min.js,**/*.min.css,.git/*}"'
@@ -79,10 +81,16 @@ let g:lightline = {
   \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
   \   'right': [ [ 'lineinfo' ],
   \              [ 'percent' ],
-  \              [ 'fileformat', 'fileenconding', 'linter_checking', 'linter_warnings', 'linter_errors', 'linter_ok' ] ]
+  \              [ 'fileformat' ],
+  \              [ 'filetype' ],
+  \              [ 'fileenconding', 'linter_checking', 'linter_warnings', 'linter_errors', 'linter_ok' ],
+  \ ]
+  \
   \ },
   \ 'component_function': {
-  \   'gitbranch': 'fugitive#head'
+  \   'gitbranch': 'fugitive#head',
+  \   'filetype': 'CustomFileType',
+  \   'fileformat': 'CustomFileFormat'
   \ },
   \ 'component_expand': {
   \  'linter_checking': 'lightline#ale#checking',
@@ -97,6 +105,14 @@ let g:lightline = {
   \     'linter_ok': 'left',
   \ }
   \ }
+
+ function! CustomFileType()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+ endfunction
+
+ function! CustomFileFormat()
+  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+ endfunction
 
 " Editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
