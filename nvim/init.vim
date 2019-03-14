@@ -65,7 +65,8 @@ let g:ale_linters = {
   \ 'javascript': ['eslint'],
   \ 'python': ['flake8'],
   \ 'php': [ 'phpcs', 'langserver'],
-  \ 'vim': ['vint']
+  \ 'vim': ['vint'],
+  \ 'typescript': ['tslint']
 \}
 
 let g:ale_php_langserver_use_global = 1
