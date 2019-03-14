@@ -1,13 +1,13 @@
 #!/bin/bash
 log "DEV-ENV: pip e n"
-$install python-pip 
-$yay nodejs-n 
+$install python-pip
+$yay nodejs-n
 
 log "PYTHON: linter e lib para o neovim"
-sudo pip install --upgrade flake8 neovim
+pip install --user flake8 neovim pipenv vim-vint
 
 log "NODE: Instalação da última versão LTS"
 sudo n lts
 
-log "JS: Instalação do Eslint e TS"
-sudo npm i -g eslint typescript
+log "JS: Instalação do Eslint, TS e tslint"
+sudo npm i -g eslint typescript tslint
