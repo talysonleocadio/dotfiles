@@ -4,7 +4,7 @@ $install reflector
 sudo reflector --protocol https --sort score --latest 5 --save /etc/pacman.d/mirrorlist
 
 log "Instalação de programas base"
-$update && $install yay ripgrep firefox tmux rlwrap hidapi zsh anki redshift xclip chromium albert
+$update && $install yay ripgrep firefox tmux rlwrap hidapi zsh anki redshift xclip chromium albert bat
 
 log "Instalação de programas presentes no AUR"
 $yay spotify mintstick g810-led-git
