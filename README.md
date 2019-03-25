@@ -1,6 +1,6 @@
 # Dotfiles
 
-Este repositório contém as configurações dos principais programas que uso em meu dia-a-dia, para mais detalhes sobre cada um dos programas, é so clicar nos links na lista abaixo:
+Repositório contendo arquivos de configuração dos principais programas que uso, para saber mais, clique nos links abaixo:
 
 ### Configurações
 
