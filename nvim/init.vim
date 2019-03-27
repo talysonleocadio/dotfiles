@@ -28,6 +28,7 @@ Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ryanoasis/vim-devicons'
+Plug 'kovisoft/slimv'
 
 call plug#end()
 
