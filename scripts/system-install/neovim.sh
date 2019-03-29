@@ -2,14 +2,19 @@
 
 log "NEOVIM: Instalação de dependências"
 
-yay -S editorconfig-core-c
-sudo pip install neovim
-sudo pip install flake8
+$yay editorconfig-core-c
+sudo pip install --user neovim
+sudo pip install --user flake8
 sudo npm i -g neovim
 
-log "NEOVIM: Criação da pasta e symlink da configuração"
+log "NEOVIM: Criação de pasta e symlink para a conf"
 mkdir -p ~/.config/nvim
-ln -sf /home/talyson/.dotfiles/nvim/init.vim ~/.config/nvim
+ln -sf ~/.dotfiles/nvim/init.vim ~/.config/nvim
+ln -sf ~/.dotfiles/nvim/coc/coc-settings.json ~/.config/nvim
+
+log "NEOVIM: Estrutura de pastas para o coc.nvim"
+mkdir -p ~/.config/coc/extensions
+ln -sf ~/.dotfiles/nvim/coc/package.json ~/.config/coc/extensions
 
 log "NEOVIM: Vim-Plug e instalação de plugins"
 # Plug
