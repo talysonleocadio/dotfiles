@@ -23,9 +23,6 @@ Plug 'mhinz/vim-startify'
 Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'deoplete-plugins/deoplete-jedi'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'} " See the README.md on source project for more details
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kovisoft/slimv'
