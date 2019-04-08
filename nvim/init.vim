@@ -28,6 +28,8 @@ Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ryanoasis/vim-devicons'
+Plug 'kovisoft/slimv'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 call plug#end()
 
@@ -65,7 +67,8 @@ let g:ale_linters = {
   \ 'javascript': ['eslint'],
   \ 'python': ['flake8'],
   \ 'php': [ 'phpcs', 'langserver'],
-  \ 'vim': ['vint']
+  \ 'vim': ['vint'],
+  \ 'typescript': ['tslint']
 \}
 
 let g:ale_php_langserver_use_global = 1
