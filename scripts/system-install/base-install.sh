@@ -4,7 +4,7 @@ $install reflector
 sudo reflector --protocol https --sort score --latest 5 --save /etc/pacman.d/mirrorlist
 
 log "Instalação de programas base"
-$update && $install yay ripgrep firefox tmux rlwrap hidapi zsh anki redshift xclip chromium albert bat
+$update && $install yay ripgrep firefox tmux rlwrap hidapi zsh anki redshift xclip chromium bat
 
 log "Instalação de programas presentes no AUR"
 $yay spotify mintstick g810-led-git
@@ -18,6 +18,5 @@ ln -sf ~/.dotfiles/albert/albert.conf ~/.config/albert
 ln -sf ~/.dotfiles/tmux/.tmux.conf ~/
 ln -sf ~/.dotfiles/zsh/.zshrc ~/
 ln -sf ~/.dotfiles/ripgrep/.ripgreprc ~/
-sudo rm /etc/g810-led/profile && \
-  sudo cp ~/.dotfiles/g610/profile /etc/g810-led
+sudo cp ~/.dotfiles/g610/profile /etc/g810-led
 cp ~/.dotfiles/redshift/redshift.conf ~/.config/redshift

@@ -1,7 +1,7 @@
 #!/bin/bash
 log "DEV-ENV: pip e n"
 $install python-pip
-$yay nodejs-n
+$yay nodejs-n nerd-fonts-hack
 
 log "PYTHON: linter e lib para o neovim"
 pip install --user flake8 neovim pipenv vim-vint
