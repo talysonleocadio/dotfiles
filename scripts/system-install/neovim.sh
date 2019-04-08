@@ -15,6 +15,7 @@ ln -sf ~/.dotfiles/nvim/coc/coc-settings.json ~/.config/nvim
 log "NEOVIM: Estrutura de pastas para o coc.nvim"
 mkdir -p ~/.config/coc/extensions
 ln -sf ~/.dotfiles/nvim/coc/package.json ~/.config/coc/extensions
+cd ~/.config/coc/extensions && yarn install
 
 log "NEOVIM: Vim-Plug e instalação de plugins"
 # Plug
