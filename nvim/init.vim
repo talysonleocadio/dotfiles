@@ -28,6 +28,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'kovisoft/slimv'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'Yggdroot/indentLine'
+Plug 'integralist/vim-mypy'
 
 call plug#end()
 
