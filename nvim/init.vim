@@ -27,6 +27,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kovisoft/slimv'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
@@ -38,8 +39,6 @@ set tabstop=2
 set shiftwidth=2
 set cursorline
 set completeopt-=preview
-set autoindent
-set ts=2 sw=2
 
 syntax enable
 colorscheme badwolf
@@ -133,7 +132,5 @@ let g:deoplete#enable_at_startup = 1
 let g:neosnippet#enable_completed_snippet = 1
 
 " Vim indent guides
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_start_level = 1
-hi IndentGuidesOdd  ctermbg=237
-hi IndentGuidesEven ctermbg=238
+let g:indentLine_color_term = 239
+let g:indentLine_char = '| '
