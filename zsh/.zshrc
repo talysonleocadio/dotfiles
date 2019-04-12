@@ -81,7 +81,6 @@ plugins=(
   docker-compose
   fzf
   git
-  iwhois
   pip
   tmux
   zsh-autosuggestions
