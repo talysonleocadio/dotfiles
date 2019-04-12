@@ -23,7 +23,6 @@ Plug 'mhinz/vim-startify'
 Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'deoplete-plugins/deoplete-jedi'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kovisoft/slimv'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
@@ -40,6 +39,7 @@ set tabstop=2
 set shiftwidth=2
 set cursorline
 set completeopt-=preview
+set autoindent
 
 syntax enable
 colorscheme badwolf
@@ -81,9 +81,8 @@ let g:lightline = {
   \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
   \   'right': [ [ 'lineinfo' ],
   \              [ 'percent' ],
-  \              [ 'fileformat' ],
-  \              [ 'filetype' ],
-  \              [ 'fileenconding', 'linter_checking', 'linter_warnings', 'linter_errors', 'linter_ok' ],
+  \              [ 'filetype', 'fileformat' ],
+  \              [ 'linter_checking', 'linter_warnings', 'linter_errors', 'linter_ok' ],
   \ ]
   \
   \ },
@@ -107,7 +106,7 @@ let g:lightline = {
   \ }
 
  function! CustomFileType()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol(): 'no ft') : ''
  endfunction
 
  function! CustomFileFormat()
@@ -132,6 +131,6 @@ let g:startify_bookmarks = [{'d': '~/.dotfiles/nvim/init.vim'}, {'z':'~/.dotfile
 let g:deoplete#enable_at_startup = 1
 let g:neosnippet#enable_completed_snippet = 1
 
-" Vim indent guides
+" identLine
+let g:indentLine_char = '▏'
 let g:indentLine_color_term = 239
-let g:indentLine_char = '| '
