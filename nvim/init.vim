@@ -1,6 +1,4 @@
 call plug#begin('~/.local/share/nvim/plugged')
-
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
@@ -23,13 +21,11 @@ Plug 'mhinz/vim-startify'
 Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'deoplete-plugins/deoplete-jedi'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'} " See the README.md on source project for more details
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kovisoft/slimv'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'Yggdroot/indentLine'
+Plug 'integralist/vim-mypy'
 
 call plug#end()
 
@@ -42,7 +38,6 @@ set shiftwidth=2
 set cursorline
 set completeopt-=preview
 set autoindent
-set ts=2 sw=2
 
 syntax enable
 colorscheme badwolf
@@ -84,9 +79,8 @@ let g:lightline = {
   \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
   \   'right': [ [ 'lineinfo' ],
   \              [ 'percent' ],
-  \              [ 'fileformat' ],
-  \              [ 'filetype' ],
-  \              [ 'fileenconding', 'linter_checking', 'linter_warnings', 'linter_errors', 'linter_ok' ],
+  \              [ 'filetype', 'fileformat' ],
+  \              [ 'linter_checking', 'linter_warnings', 'linter_errors', 'linter_ok' ],
   \ ]
   \
   \ },
@@ -110,7 +104,7 @@ let g:lightline = {
   \ }
 
  function! CustomFileType()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol(): 'no ft') : ''
  endfunction
 
  function! CustomFileFormat()
@@ -135,8 +129,6 @@ let g:startify_bookmarks = [{'d': '~/.dotfiles/nvim/init.vim'}, {'z':'~/.dotfile
 let g:deoplete#enable_at_startup = 1
 let g:neosnippet#enable_completed_snippet = 1
 
-" Vim indent guides
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_start_level = 1
-hi IndentGuidesOdd  ctermbg=237
-hi IndentGuidesEven ctermbg=238
+" identLine
+let g:indentLine_char = '▏'
+let g:indentLine_color_term = 239
