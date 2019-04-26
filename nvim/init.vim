@@ -124,7 +124,7 @@ function! ClipboardPaste()
 endfunction
 
 " vim-startify
-let g:startify_bookmarks = [{'d': '~/.dotfiles/nvim/init.vim'}, {'z':'~/.dotfiles/zsh/.zshrc'}]
+let g:startify_bookmarks = [{'d': '~/.dotfiles/nvim/init.vim'}, {'z':'~/.dotfiles/zsh/.zshrc'}, {'i': '~/.dotfiles/i3/config'}]
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
