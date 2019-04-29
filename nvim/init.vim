@@ -28,6 +28,7 @@ Plug 'kovisoft/slimv'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'Yggdroot/indentLine'
 Plug 'integralist/vim-mypy'
+Plug 'severin-lemaignan/vim-minimap'
 
 call plug#end()
 
