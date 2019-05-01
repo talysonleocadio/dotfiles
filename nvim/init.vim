@@ -14,7 +14,6 @@ Plug 'quramy/tsuquyomi'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-rhubarb'
 Plug 'ap/vim-css-color'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.vim'
@@ -28,7 +27,6 @@ Plug 'kovisoft/slimv'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'Yggdroot/indentLine'
 Plug 'integralist/vim-mypy'
-Plug 'severin-lemaignan/vim-minimap'
 
 call plug#end()
 
@@ -126,7 +124,7 @@ function! ClipboardPaste()
 endfunction
 
 " vim-startify
-let g:startify_bookmarks = [{'d': '~/.dotfiles/nvim/init.vim'}, {'z':'~/.dotfiles/zsh/.zshrc'}, {'i': '~/.dotfiles/i3/config'}]
+let g:startify_bookmarks = [{'d': '~/.dotfiles/nvim/init.vim'}, {'z':'~/.dotfiles/zsh/.zshrc'}]
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
