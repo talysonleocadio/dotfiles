@@ -4,7 +4,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
 Plug 'w0rp/ale'
-Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 Plug 'sjl/badwolf'
 Plug 'scrooloose/nerdtree'
@@ -19,6 +18,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.vim'
 Plug 'maximbaz/lightline-ale'
 Plug 'mhinz/vim-startify'
+Plug 'mhinz/vim-signify'
 Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'deoplete-plugins/deoplete-jedi'
@@ -27,6 +27,8 @@ Plug 'kovisoft/slimv'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'Yggdroot/indentLine'
 Plug 'integralist/vim-mypy'
+Plug 'sickill/vim-monokai'
+Plug 'sickill/vim-monokai'
 
 call plug#end()
 
@@ -41,7 +43,7 @@ set completeopt-=preview
 set autoindent
 
 syntax enable
-colorscheme badwolf
+colorscheme monokai
 
 " Autocommands
 autocmd BufWrite * %s/\s\+$//e
@@ -133,3 +135,12 @@ let g:neosnippet#enable_completed_snippet = 1
 " identLine
 let g:indentLine_char = '▏'
 let g:indentLine_color_term = 239
+
+let g:signify_vcs_list = ['git']
+let g:signify_realtime = 1
+let g:signify_cursorhold_normal = 0
+let g:signify_cursorhold_insert = 0
+
+highlight SignifySignAdd    cterm=bold ctermbg=237  ctermfg=119
+highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=167
+highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
