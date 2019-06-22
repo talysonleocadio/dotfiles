@@ -250,10 +250,10 @@ bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
 # Autostart apps
 exec --no-startup-id "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 exec "albert"
-exec "clipit"
-exec "redshift"
-#Background
-exec --no-startup-id "feh --bg-fill ~/Pictures/toy_store.jpg"
+exec "/usr/bin/redshift-gtk"
+
+# Background
+exec --no-startup-id "/usr/bin/variety"
 # exec --no-startup-id xautolock -time 5 -locker "$HOME/.dotfiles/scripts/lock-screen.sh"
 
 exec --no-startup-id xautolock -time 5 -locker "cinnamon-screensaver-command -l"

@@ -77,6 +77,7 @@ SPACESHIP_GIT_BRANCH_COLOR="166"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  colored-man-pages
   docker
   docker-compose
   fzf
@@ -84,6 +85,7 @@ plugins=(
   pip
   tmux
   zsh-autosuggestions
+  zsh_reload
   zsh-syntax-highlighting
 )
 
@@ -121,7 +123,6 @@ source $ZSH/oh-my-zsh.sh
 #Aliases
 alias scheme="rlwrap scheme"
 alias vim="nvim"
-
 # Atribuição do arquivo de configuração para o ripgrep
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 
@@ -129,3 +130,5 @@ export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 FZF_CTRL_T_COMMAND="rg --files --no-messages --hidden --glob '!.git/'"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

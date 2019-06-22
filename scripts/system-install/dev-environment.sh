@@ -4,7 +4,7 @@ $install python-pip
 $yay nodejs-n nerd-fonts-hack
 
 log "PYTHON: linter e lib para o neovim"
-pip install --user flake8 neovim pipenv vim-vint
+pip install --user flake8 neovim pipenv vim-vint ipython
 
 log "NODE: Instalação da última versão LTS"
 sudo n lts
