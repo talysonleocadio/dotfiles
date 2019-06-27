@@ -49,7 +49,8 @@ colorscheme monokai
 autocmd BufWrite * %s/\s\+$//e
 
 " Key maps
-map <C-n> :NERDTreeToggle<CR>
+let mapleader = "\<Space>"
+map <leader>n :NERDTreeToggle<CR>
 map <C-t> :Files<CR>
 noremap <esc> :noh<CR>
 nnoremap <silent> <C-N> :bp<CR>
@@ -141,6 +142,7 @@ let g:signify_realtime = 1
 let g:signify_cursorhold_normal = 0
 let g:signify_cursorhold_insert = 0
 
+" Startify highlight settings
 highlight SignifySignAdd    cterm=bold ctermbg=237  ctermfg=119
 highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=167
 highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
