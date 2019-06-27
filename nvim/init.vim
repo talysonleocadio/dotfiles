@@ -18,7 +18,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.vim'
 Plug 'maximbaz/lightline-ale'
 Plug 'mhinz/vim-startify'
-Plug 'mhinz/vim-signify'
+" Plug 'mhinz/vim-signify'
 Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'deoplete-plugins/deoplete-jedi'
@@ -27,8 +27,9 @@ Plug 'kovisoft/slimv'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'Yggdroot/indentLine'
 Plug 'integralist/vim-mypy'
-Plug 'sickill/vim-monokai'
-Plug 'sickill/vim-monokai'
+Plug 'crusoexia/vim-monokai'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -41,20 +42,23 @@ set shiftwidth=2
 set cursorline
 set completeopt-=preview
 set autoindent
+set termguicolors
 
 syntax enable
 colorscheme monokai
+let g:monokai_term_italic = 1
 
 " Autocommands
 autocmd BufWrite * %s/\s\+$//e
 
 " Key maps
 let mapleader = "\<Space>"
-map <leader>n :NERDTreeToggle<CR>
+map <silent> <leader>nt :NERDTreeToggle<CR>
+map <silent> <leader>sb :Buffers<CR>
+map <silent> <leader>bs :Startify<CR>
+map <silent> <leader>pi :PlugInstall<CR>
+map <silent> <leader>pc :PlugClean<CR>
 map <C-t> :Files<CR>
-noremap <esc> :noh<CR>
-nnoremap <silent> <C-N> :bp<CR>
-nnoremap <silent> <C-M> :bn<CR>
 
 " Fzf_vim
 let $FZF_DEFAULT_COMMAND='rg --files --hidden --no-messages --glob="!{**/*.min.js,**/*.min.css,.git/*}"'
@@ -142,7 +146,13 @@ let g:signify_realtime = 1
 let g:signify_cursorhold_normal = 0
 let g:signify_cursorhold_insert = 0
 
-" Startify highlight settings
-highlight SignifySignAdd    cterm=bold ctermbg=237  ctermfg=119
-highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=167
-highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
+" Vim-MultipleCursors settings
+let g:multi_cursor_select_all_word_key = '<leader>na'
+
+let g:gitgutter_sign_added = '\ +'
+let g:gitgutter_sign_modified = '\ ~'
+let g:gitgutter_sign_removed = '\ _'
+
+highlight GitGutterAdd    guifg=#009900 guibg=#3f3f3f
+highlight GitGutterChange guifg=#bbbb00 guibg=#3f3f3f
+highlight GitGutterDelete guifg=#ff2222 guibg=#3f3f3f
