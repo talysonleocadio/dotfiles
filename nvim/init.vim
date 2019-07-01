@@ -18,7 +18,6 @@ Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.vim'
 Plug 'maximbaz/lightline-ale'
 Plug 'mhinz/vim-startify'
-" Plug 'mhinz/vim-signify'
 Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'deoplete-plugins/deoplete-jedi'
@@ -43,6 +42,7 @@ set cursorline
 set completeopt-=preview
 set autoindent
 set termguicolors
+set updatetime=100
 
 syntax enable
 colorscheme monokai
@@ -58,6 +58,7 @@ map <silent> <leader>sb :Buffers<CR>
 map <silent> <leader>bs :Startify<CR>
 map <silent> <leader>pi :PlugInstall<CR>
 map <silent> <leader>pc :PlugClean<CR>
+map <silent> <leader>d :noh<CR>
 map <C-t> :Files<CR>
 
 " Fzf_vim
@@ -141,17 +142,13 @@ let g:neosnippet#enable_completed_snippet = 1
 let g:indentLine_char = '▏'
 let g:indentLine_color_term = 239
 
-let g:signify_vcs_list = ['git']
-let g:signify_realtime = 1
-let g:signify_cursorhold_normal = 0
-let g:signify_cursorhold_insert = 0
-
 " Vim-MultipleCursors settings
 let g:multi_cursor_select_all_word_key = '<leader>na'
 
 let g:gitgutter_sign_added = '\ +'
 let g:gitgutter_sign_modified = '\ ~'
 let g:gitgutter_sign_removed = '\ _'
+let g:gitgutter_grep='rg'
 
 highlight GitGutterAdd    guifg=#009900 guibg=#3f3f3f
 highlight GitGutterChange guifg=#bbbb00 guibg=#3f3f3f
