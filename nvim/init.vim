@@ -26,9 +26,9 @@ Plug 'kovisoft/slimv'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'Yggdroot/indentLine'
 Plug 'integralist/vim-mypy'
-Plug 'crusoexia/vim-monokai'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
+Plug 'crusoexia/vim-monokai'
 
 call plug#end()
 
@@ -47,6 +47,7 @@ set updatetime=100
 syntax enable
 colorscheme monokai
 let g:monokai_term_italic = 1
+let g:monokai_gui_italic = 1
 
 " Autocommands
 autocmd BufWrite * %s/\s\+$//e
