@@ -7,7 +7,7 @@ Repositório contendo arquivos de configuração dos principais programas que us
 Meus dotfiles contém configurações para os seguintes programas:
   - [ Albert ](albert/albert.conf)
   - [ g610 (Configuração para SO's baseados em Linux) ](g610/profile)
-  - [ I3wm (Usando I3-gaps) ](i3/config)
+  - [ I3wm (Com I3-gaps + I3-cinnamon) ](i3/config)
   - [ I3status ](i3status/config)
   - [ Nvim ](nvim/init.vim)
   - [ Redshift (Arquivo base para uso offline) ](redshift/redshift.conf)
