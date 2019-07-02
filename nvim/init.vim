@@ -1,4 +1,5 @@
 call plug#begin('~/.local/share/nvim/plugged')
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-zsh' }
 Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
@@ -28,7 +29,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'integralist/vim-mypy'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
-Plug 'crusoexia/vim-monokai'
+Plug 'sickill/vim-monokai'
 
 call plug#end()
 
@@ -146,6 +147,8 @@ let g:indentLine_color_term = 239
 " Vim-MultipleCursors settings
 let g:multi_cursor_select_all_word_key = '<leader>na'
 
+
+" Gitgutter settings
 let g:gitgutter_sign_added = '\ +'
 let g:gitgutter_sign_modified = '\ ~'
 let g:gitgutter_sign_removed = '\ _'
