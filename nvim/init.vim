@@ -42,6 +42,7 @@ set shiftwidth=2
 set cursorline
 set completeopt-=preview
 set autoindent
+set smartindent
 set termguicolors
 set updatetime=100
 
@@ -72,15 +73,14 @@ let g:ale_fixers = {'javascript': ['eslint']}
 let g:ale_linters = {
   \ 'javascript': ['eslint'],
   \ 'python': ['flake8'],
-  \ 'php': [ 'phpcs', 'langserver'],
+  \ 'php': ['langserver', 'phpmd'],
   \ 'vim': ['vint'],
   \ 'typescript': ['tslint']
 \}
 
-let g:ale_php_langserver_use_global = 1
 let g:ale_php_langserver_executable = $HOME.'/.config/composer/vendor/bin/php-language-server.php'
-let g:ale_php_phpcs_use_global = 1
-let g:ale_php_phpcs_executable = $HOME.'/.config/composer/vendor/bin/phpcs'
+let g:ale_php_phpmd_executable = $HOME.'/.config/composer/vendor/bin/phpmd'
+let g:ale_php_phpmd_ruleset = 'cleancode,codesize,unusedcode'
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
