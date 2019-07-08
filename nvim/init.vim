@@ -82,6 +82,9 @@ let g:ale_php_langserver_executable = $HOME.'/.config/composer/vendor/bin/php-la
 let g:ale_php_phpcs_use_global = 1
 let g:ale_php_phpcs_executable = $HOME.'/.config/composer/vendor/bin/phpcs'
 
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
 " lightline
 let g:lightline = {
   \ 'colorscheme': 'powerline',
