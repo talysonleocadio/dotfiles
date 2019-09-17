@@ -29,7 +29,7 @@ hide_edge_borders both
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec konsole
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -43,7 +43,6 @@ gaps outer 3
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
@@ -125,12 +124,6 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+z exec "cinnamon-session-quit"
-# lock and shutdown
-bindsym $mod+Shift+x exec "cinnamon-session-quit --power-off"
-# bindsym $mod+Control+l exec "$HOME/.dotfiles/scripts/lock-screen.sh"
-bindsym $mod+Control+l exec "cinnamon-screensaver-command -l"
 # resize window (you can also use the mouse for that)
 mode "resize" {
     # These bindings trigger as soon as you enter the resize mode
@@ -156,16 +149,6 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-set $shutdown Are you shure? Y/N
-mode "$shutdown" {
-    bindsym y exec --no-startup-id systemctl poweroff -i, mode "default"
-    bindsym n mode "default"
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
-bindsym $mod+End mode "$shutdown"
 
 set $bg-color            #2f343f
 set $inactive-bg-color   #2f343f
@@ -237,7 +220,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym XF86MonBrightnessUp   exec xbacklight -inc 10
 
 # App shortcuts
-bindsym $mod+w exec "python3 ~/.dotfiles/scripts/chromium-execution.py"
+bindsym $mod+w exec "/usr/bin/chromium"
 bindsym Print exec "/usr/bin/spectacle"
 
 # Moving through workspaces
@@ -247,15 +230,4 @@ bindsym $mod+Shift+Tab workspace prev
 # Redirect sound to headphones
 bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
 
-# Autostart apps
-exec --no-startup-id "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
-exec "albert"
-exec "/usr/bin/redshift-gtk"
-
-# Background
-exec --no-startup-id "/usr/bin/variety"
-# exec --no-startup-id xautolock -time 5 -locker "$HOME/.dotfiles/scripts/lock-screen.sh"
-
-exec --no-startup-id xautolock -time 5 -locker "cinnamon-screensaver-command -l"
-exec --no-startup-id compton --config ~/.dotfiles/compton/compton.conf
-exec --no-startup-id g610-led -p ~/.dotfiles/g610/profile
+exec --no-startup-id xautolock -time 5 -locker "loginctl lock-session"
