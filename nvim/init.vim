@@ -65,7 +65,7 @@ map <silent> <leader>d :noh<CR>
 map <C-t> :Files<CR>
 
 " Fzf_vim
-let $FZF_DEFAULT_COMMAND='rg --files --hidden --no-messages --glob="!{**/*.min.js,**/*.min.css,.git/*}"'
+let $FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --no-messages --glob="!{**/*.min.js,**/*.min.css,.git/*}"'
 
 " Ale
 let g:ale_linters_explicit = 1
