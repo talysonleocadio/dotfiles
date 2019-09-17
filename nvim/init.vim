@@ -8,9 +8,9 @@ Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'
 Plug 'sjl/badwolf'
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'quramy/tsuquyomi'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-abolish'
@@ -30,6 +30,7 @@ Plug 'integralist/vim-mypy'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
 Plug 'sickill/vim-monokai'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -47,9 +48,8 @@ set termguicolors
 set updatetime=100
 
 syntax enable
-colorscheme monokai
-let g:monokai_term_italic = 1
-let g:monokai_gui_italic = 1
+let g:gruvbox_italic=1
+colorscheme gruvbox
 
 " Autocommands
 autocmd BufWrite * %s/\s\+$//e
@@ -157,6 +157,6 @@ let g:gitgutter_sign_modified = '\ ~'
 let g:gitgutter_sign_removed = '\ _'
 let g:gitgutter_grep='rg'
 
-highlight GitGutterAdd    guifg=#009900 guibg=#3f3f3f
-highlight GitGutterChange guifg=#bbbb00 guibg=#3f3f3f
-highlight GitGutterDelete guifg=#ff2222 guibg=#3f3f3f
+highlight GitGutterAdd    guifg=#009900
+highlight GitGutterChange guifg=#bbbb00
+highlight GitGutterDelete guifg=#ff2222
