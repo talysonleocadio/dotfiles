@@ -4,6 +4,6 @@
     "coc-html": "^1.2.1",
     "coc-json": "^1.0.17",
     "coc-snippets": "^2.1.5",
-    "coc-tsserver": "^1.2.6"
+    "coc-tsserver": ">=1.4.0"
   }
 }
