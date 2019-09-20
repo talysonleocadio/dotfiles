@@ -64,6 +64,10 @@ map <silent> <leader>pc :PlugClean<CR>
 map <silent> <leader>d :noh<CR>
 map <C-t> :Files<CR>
 
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+
 " Fzf_vim
 let $FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --no-messages --glob="!{**/*.min.js,**/*.min.css,.git/*}"'
 
@@ -152,11 +156,11 @@ let g:multi_cursor_select_all_word_key = '<leader>na'
 
 
 " Gitgutter settings
-let g:gitgutter_sign_added = '\ +'
-let g:gitgutter_sign_modified = '\ ~'
-let g:gitgutter_sign_removed = '\ _'
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '~'
+let g:gitgutter_sign_removed = '_'
 let g:gitgutter_grep='rg'
 
-highlight GitGutterAdd    guifg=#009900
-highlight GitGutterChange guifg=#bbbb00
-highlight GitGutterDelete guifg=#ff2222
+highlight GitGutterAdd    guifg=#009900 guibg=#3c3836
+highlight GitGutterChange guifg=#bbbb00 guibg=#3c3836
+highlight GitGutterDelete guifg=#ff2222 guibg=#3c3836
