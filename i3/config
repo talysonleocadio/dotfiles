@@ -168,10 +168,11 @@ client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color       
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-  tray_output primary
-  status_command i3status
+  tray_output none
+ # status_command i3status
   font pango:monospace 10
   strip_workspace_numbers yes
+  position top
   height 25 # (i3-gaps)
 	colors {
     background $bg-color
@@ -183,9 +184,15 @@ bar {
   }
 }
 
-# floating windows
-for_window [class="Pavucontrol"] floating enable
-for_window [class="Kalu"] floating enable
+# Don’t treat Plasma pop-ups as full-sized windows
+for_window [class="plasmashell"] floating enable
+
+# Don’t spawn an empty window for the Plasma Desktop
+for_window [title="Desktop — Plasma"] kill, floating enable, border none
+
+# Don’t let notifications and non-interactive pop-up windows steal focus
+no_focus [class="plasmashell" window_type="notification"]
+no_focus [class="plasmashell" window_type="on_screen_display"]
 ## Multimedia Keys
 
 # volume
@@ -231,3 +238,4 @@ bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
 
 exec --no-startup-id xautolock -time 5 -locker "loginctl lock-session"
+exec --no-startup-id compton --config ~/.dotfiles/compton/compton.conf
