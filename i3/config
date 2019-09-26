@@ -184,6 +184,8 @@ bar {
   }
 }
 
+# -------------- BEGIN OF PLASMA INTEGRATION --------------
+
 # Don’t treat Plasma pop-ups as full-sized windows
 for_window [class="plasmashell"] floating enable
 
@@ -193,6 +195,10 @@ for_window [title="Desktop — Plasma"] kill, floating enable, border none
 # Don’t let notifications and non-interactive pop-up windows steal focus
 no_focus [class="plasmashell" window_type="notification"]
 no_focus [class="plasmashell" window_type="on_screen_display"]
+
+# -------------- END OF PLASMA INTEGRATION --------------
+
+
 ## Multimedia Keys
 
 # volume
@@ -239,3 +245,4 @@ bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
 
 exec --no-startup-id xautolock -time 5 -locker "loginctl lock-session"
 exec --no-startup-id compton --config ~/.dotfiles/compton/compton.conf
+exec --no-startup-id feh --bg-scale ~/.config/variety/Favorites/zen-python.png
