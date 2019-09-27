@@ -245,4 +245,5 @@ bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
 
 exec --no-startup-id xautolock -time 5 -locker "loginctl lock-session"
 exec --no-startup-id compton --config ~/.dotfiles/compton/compton.conf
+exec --no-startup-id wmctrl -c Plasma
 exec --no-startup-id feh --bg-scale ~/.config/variety/Favorites/zen-python.png
