@@ -31,6 +31,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
 Plug 'sickill/vim-monokai'
 Plug 'morhetz/gruvbox'
+Plug 'simnalamburt/vim-mundo'
 
 call plug#end()
 
@@ -50,6 +51,10 @@ set updatetime=100
 syntax enable
 let g:gruvbox_italic=1
 colorscheme gruvbox
+
+" Undo tree
+set undofile
+set undodir=~/.nvim/undo
 
 " Autocommands
 autocmd BufWrite * %s/\s\+$//e
