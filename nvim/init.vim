@@ -142,7 +142,7 @@ endfunction
 
 " vim-startify
 let g:startify_change_to_dir = 0
-let g:startify_bookmarks = [{'d': '~/.dotfiles/nvim/init.vim'}, {'z':'~/.dotfiles/zsh/.zshrc'}. {'i': '~/.dotfiles/i3/config'}]
+let g:startify_bookmarks = [{'d': '~/.dotfiles/nvim/init.vim'}, {'z':'~/.dotfiles/zsh/.zshrc'}, {'i': '~/.dotfiles/i3/config'}]
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
@@ -154,7 +154,6 @@ let g:indentLine_color_term = 239
 
 " Vim-MultipleCursors settings
 let g:multi_cursor_select_all_word_key = '<leader>na'
-
 
 " Gitgutter settings
 let g:gitgutter_sign_added = '+'
