@@ -37,7 +37,6 @@ call plug#end()
 
 set number relativenumber
 set smartcase
-set ignorecase
 set expandtab
 set tabstop=2
 set shiftwidth=2
@@ -47,14 +46,16 @@ set autoindent
 set smartindent
 set termguicolors
 set updatetime=100
-
-syntax enable
-let g:gruvbox_italic=1
-colorscheme gruvbox
+set inccommand=nosplit
+set title
 
 " Undo tree
 set undofile
 set undodir=~/.nvim/undo
+
+syntax enable
+let g:gruvbox_italic=1
+colorscheme gruvbox
 
 " Autocommands
 autocmd BufWrite * %s/\s\+$//e
