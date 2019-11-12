@@ -36,6 +36,7 @@ Plug 'simnalamburt/vim-mundo'
 call plug#end()
 
 set number relativenumber
+set ignorecase
 set smartcase
 set expandtab
 set tabstop=2
