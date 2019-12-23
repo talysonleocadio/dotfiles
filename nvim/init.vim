@@ -137,6 +137,7 @@ let g:lightline = {
 
 " Editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+let g:EditorConfig_verbose = 1
 
 " Xclip copy/paste
 function! ClipboardYank()
