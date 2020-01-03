@@ -137,5 +137,6 @@ FZF_CTRL_T_COMMAND="rg --files --no-messages --hidden --glob '!.git/'"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 . /opt/asdf-vm/asdf.sh
-
 . /opt/asdf-vm/completions/asdf.bash
+
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
