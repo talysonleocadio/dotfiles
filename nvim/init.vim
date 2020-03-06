@@ -29,9 +29,12 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'
 Plug 'simnalamburt/vim-mundo'
+Plug 'dbmrq/vim-ditto'
+Plug 'reedes/vim-pencil'
 
 call plug#end()
 
+filetype plugin on
 set number relativenumber
 set ignorecase
 set smartcase
@@ -57,6 +60,11 @@ colorscheme gruvbox
 
 " Autocommands
 autocmd BufWrite * %s/\s\+$//e
+augroup writter
+  autocmd!
+  autocmd FileType markdown,text call pencil#init({'wrap': 'soft'})
+                            \ | DittoOn
+augroup END
 
 " Key maps
 let mapleader = "\<Space>"
