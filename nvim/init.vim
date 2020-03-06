@@ -89,7 +89,7 @@ let $FZF_DEFAULT_COMMAND='rg --files --hidden --no-messages --glob="!{**/*.min.j
 let g:ale_linters_explicit = 1
 let g:ale_fixers = {'javascript': ['eslint']}
 let g:ale_linters = {
-  \ 'javascript': ['eslint'],
+  \ 'javascript': ['eslint', 'tsserver'],
   \ 'python': ['flake8'],
   \ 'php': ['langserver', 'phpmd'],
   \ 'vim': ['vint'],
