@@ -83,6 +83,7 @@ plugins=(
   fzf
   git
   pip
+  poetry
   tmux
   zsh-autosuggestions
   zsh_reload
