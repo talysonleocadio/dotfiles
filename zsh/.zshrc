@@ -77,6 +77,7 @@ SPACESHIP_GIT_BRANCH_COLOR="166"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  asdf
   colored-man-pages
   docker
   docker-compose
@@ -137,8 +138,5 @@ FZF_CTRL_T_COMMAND="rg --files --no-messages --hidden --glob '!.git/'"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export EDITOR="nvim"
-
-. /opt/asdf-vm/asdf.sh
-. /opt/asdf-vm/completions/asdf.bash
 
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
