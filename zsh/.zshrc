@@ -132,7 +132,8 @@ alias find="fd"
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 
 # FZF with RG
-FZF_CTRL_T_COMMAND="rg --files --no-messages --hidden --glob '!.git/'"
+export FZF_CTRL_T_COMMAND="rg --files --no-messages --hidden --glob '!.git/'"
+export FZF_CTRL_T_OPTS='--preview "bat {} | head -20"'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
