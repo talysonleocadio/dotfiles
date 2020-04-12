@@ -19,8 +19,9 @@ Plug 'iamcco/markdown-preview.vim'
 Plug 'maximbaz/lightline-ale'
 Plug 'mhinz/vim-startify'
 Plug 'sheerun/vim-polyglot'
-Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'Shougo/neco-vim'
+Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'ryanoasis/vim-devicons'
 " Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'Yggdroot/indentLine'
