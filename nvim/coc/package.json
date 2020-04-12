@@ -1,9 +1,9 @@
 {
   "dependencies": {
     "coc-css": "^1.2.2",
-    "coc-html": "^1.2.1",
+    "coc-html": ">=1.2.4",
     "coc-json": ">=1.2.4",
-    "coc-snippets": ">=2.1.17",
-    "coc-tsserver": ">=1.4.9"
+    "coc-snippets": ">=2.1.24",
+    "coc-tsserver": ">=1.4.12"
   }
 }
