@@ -79,7 +79,7 @@ inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
 " Fzf_vim
-let $FZF_DEFAULT_COMMAND='rg --files --hidden --no-messages --glob="!{**/*.min.js,**/*.min.css,.git/*}"'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --no-messages --glob="!{**/*.min.js,**/*.min.css,.git/*}"'
 
 " Ale
 let g:ale_linters_explicit = 1
