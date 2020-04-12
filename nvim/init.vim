@@ -214,3 +214,30 @@ Shortcut! <C-t> 'Jumpback from tag definition'
 Shortcut! <C-w>v 'Vertical split screen'
 Shortcut! <C-w>s 'Horizontal split screen'
 
+function! CtagsGenerator()
+python3 << EOF
+
+import os
+import shutil
+import subprocess
+import sys
+
+ctag_path = shutil.which("ctags")
+if ctag_path is None:
+  sys.exit("It looks like you dont have ctags installed, please install it before continuing")
+
+git_folder_path = os.path.join(os.getcwd(), '.git')
+git_folder_path_exists = os.path.isdir(git_folder_path)
+if not git_folder_path_exists:
+  sys.exit('The git folder was not found on root, tags will not be generated')
+
+print('Generating tags')
+tag_file_path = os.path.join(git_folder_path, 'tags')
+tags_args = ['ctags', '-R', '-f', tag_file_path, '.']
+subprocess.run(tags_args)
+print('Tags generated successfully!')
+
+EOF
+endfunction
+
+command! GenerateTags call CtagsGenerator()
