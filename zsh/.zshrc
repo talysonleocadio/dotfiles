@@ -83,6 +83,7 @@ plugins=(
   fzf
   git
   pip
+  poetry
   tmux
   zsh-autosuggestions
   zsh_reload
@@ -123,12 +124,21 @@ source $ZSH/oh-my-zsh.sh
 #Aliases
 alias scheme="rlwrap scheme"
 alias vim="nvim"
+alias diff="diff-so-fancy"
+alias cat="bat"
+alias find="fd"
 # Atribuição do arquivo de configuração para o ripgrep
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 
 # FZF with RG
-FZF_CTRL_T_COMMAND="rg --files --no-messages --hidden --glob '!.git/'"
+export FZF_CTRL_T_COMMAND="rg --files --no-messages --hidden --glob '!.git/'"
+export FZF_CTRL_T_OPTS='--preview "bat {} | head -20"'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export EDITOR="nvim"
+
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+
+. /home/talyson/.asdf/asdf.sh

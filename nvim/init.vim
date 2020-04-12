@@ -6,11 +6,10 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
 Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'
-Plug 'sjl/badwolf'
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
-Plug 'quramy/tsuquyomi'
+" Plug 'quramy/tsuquyomi'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-abolish'
@@ -20,22 +19,30 @@ Plug 'iamcco/markdown-preview.vim'
 Plug 'maximbaz/lightline-ale'
 Plug 'mhinz/vim-startify'
 Plug 'sheerun/vim-polyglot'
-Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'Shougo/neco-vim'
+Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'ryanoasis/vim-devicons'
-Plug 'kovisoft/slimv'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+" Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'Yggdroot/indentLine'
 Plug 'integralist/vim-mypy'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
-Plug 'sickill/vim-monokai'
+Plug 'morhetz/gruvbox'
+Plug 'simnalamburt/vim-mundo'
+Plug 'dbmrq/vim-ditto'
+Plug 'reedes/vim-pencil'
+Plug 'RRethy/vim-illuminate'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'majutsushi/tagbar'
+Plug 'sunaku/vim-shortcut'
 
 call plug#end()
 
+filetype plugin on
 set number relativenumber
-set smartcase
 set ignorecase
+set smartcase
 set expandtab
 set tabstop=2
 set shiftwidth=2
@@ -45,33 +52,40 @@ set autoindent
 set smartindent
 set termguicolors
 set updatetime=100
+set inccommand=nosplit
+set title
+
+" Undo tree
+set undofile
+set undodir=~/.nvim/undo
 
 syntax enable
-colorscheme monokai
-let g:monokai_term_italic = 1
-let g:monokai_gui_italic = 1
+let g:gruvbox_italic=1
+colorscheme gruvbox
 
 " Autocommands
 autocmd BufWrite * %s/\s\+$//e
+augroup writter
+  autocmd!
+  autocmd FileType markdown,text call pencil#init({'wrap': 'soft'})
+                            \ | DittoOn
+augroup END
 
 " Key maps
 let mapleader = "\<Space>"
-map <silent> <leader>nt :NERDTreeToggle<CR>
-map <silent> <leader>sb :Buffers<CR>
-map <silent> <leader>bs :Startify<CR>
-map <silent> <leader>pi :PlugInstall<CR>
-map <silent> <leader>pc :PlugClean<CR>
-map <silent> <leader>d :noh<CR>
-map <C-t> :Files<CR>
+
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
 " Fzf_vim
-let $FZF_DEFAULT_COMMAND='rg --files --hidden --no-messages --glob="!{**/*.min.js,**/*.min.css,.git/*}"'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --no-messages --glob="!{**/*.min.js,**/*.min.css,.git/*}"'
 
 " Ale
 let g:ale_linters_explicit = 1
 let g:ale_fixers = {'javascript': ['eslint']}
 let g:ale_linters = {
-  \ 'javascript': ['eslint'],
+  \ 'javascript': ['eslint', 'tsserver'],
   \ 'python': ['flake8'],
   \ 'php': ['langserver', 'phpmd'],
   \ 'vim': ['vint'],
@@ -81,9 +95,6 @@ let g:ale_linters = {
 let g:ale_php_langserver_executable = $HOME.'/.config/composer/vendor/bin/php-language-server.php'
 let g:ale_php_phpmd_executable = $HOME.'/.config/composer/vendor/bin/phpmd'
 let g:ale_php_phpmd_ruleset = 'cleancode,codesize,unusedcode'
-
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " lightline
 let g:lightline = {
@@ -127,6 +138,7 @@ let g:lightline = {
 
 " Editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+let g:EditorConfig_verbose = 1
 
 " Xclip copy/paste
 function! ClipboardYank()
@@ -137,7 +149,8 @@ function! ClipboardPaste()
 endfunction
 
 " vim-startify
-let g:startify_bookmarks = [{'d': '~/.dotfiles/nvim/init.vim'}, {'z':'~/.dotfiles/zsh/.zshrc'}]
+let g:startify_change_to_dir = 0
+let g:startify_bookmarks = [{'d': '~/.dotfiles/nvim/init.vim'}, {'z':'~/.dotfiles/zsh/.zshrc'}, {'i': '~/.dotfiles/i3/config'}]
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
@@ -150,13 +163,81 @@ let g:indentLine_color_term = 239
 " Vim-MultipleCursors settings
 let g:multi_cursor_select_all_word_key = '<leader>na'
 
-
 " Gitgutter settings
-let g:gitgutter_sign_added = '\ +'
-let g:gitgutter_sign_modified = '\ ~'
-let g:gitgutter_sign_removed = '\ _'
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '~'
+let g:gitgutter_sign_removed = '_'
 let g:gitgutter_grep='rg'
 
-highlight GitGutterAdd    guifg=#009900 guibg=#3f3f3f
-highlight GitGutterChange guifg=#bbbb00 guibg=#3f3f3f
-highlight GitGutterDelete guifg=#ff2222 guibg=#3f3f3f
+highlight GitGutterAdd    guifg=#009900 guibg=#3c3836
+highlight GitGutterChange guifg=#bbbb00 guibg=#3c3836
+highlight GitGutterDelete guifg=#ff2222 guibg=#3c3836
+
+
+" Shortcuts definitions
+runtime plugin/shortcut.vim
+
+Shortcut 'Show shortcut menu and run chosen shortcut'
+      \ noremap <silent> <Space><Space> :Shortcuts<CR>
+Shortcut 'Fallback to shortcut menu on partial entry'
+      \ noremap <silent> <Space> :Shortcuts<CR>
+Shortcut 'Fzf: open file search and go to chosen file'
+      \ map <silent> <Space>ff :Files<CR>
+Shortcut 'Fzf: open gfiles search and go to chosen file'
+      \ map <silent> <Space>fg :GFiles<CR>
+Shortcut 'Fzf: open buffers search and go to choses buffer'
+      \ map <silent> <Space>sb :Buffers<CR>
+Shortcut 'Vim-plug: install new plugins'
+      \ noremap <silent> <Space>pi :PlugInstall<CR>
+Shortcut 'Vim-plug: remove unsable plugins'
+      \ noremap <silent> <Space>pc :PlugClean<CR>
+Shortcut 'Vim-plug: update all plugins plugins'
+      \ noremap <silent> <Space>pu :PlugUpdate<CR>
+Shortcut 'NERDTree: toggle navigation tree'
+      \ noremap <silent> <Space>nt :NERDTreeToggle<CR>
+Shortcut 'Startify: go back to main menu'
+      \ noremap <silent> <Space>bs :Startify<CR>
+Shortcut 'Clear highlight search'
+      \ map <silent> <C-l> :noh<CR>
+Shortcut 'Vim-mundo: Toggle undo tree'
+      \ map <silent> <Space>mt :MundoToggle<CR>
+Shortcut 'Tagbar: Toggle tagbar'
+      \ noremap <silent> <Space>tt :TagbarToggle<CR>
+Shortcut 'Ale: Go to next issue'
+      \ noremap <silent> <C-k> <Plug>(ale_previous_wrap)
+Shortcut 'Ale: Go to previous issue'
+      \ noremap <silent> <C-j> <Plug>(ale_next_wrap)
+Shortcut 'Source current file'
+      \ noremap <silent> <Space>sf :source %<CR>
+Shortcut! <C-]> 'Go to tag definition'
+Shortcut! <C-t> 'Jumpback from tag definition'
+Shortcut! <C-w>v 'Vertical split screen'
+Shortcut! <C-w>s 'Horizontal split screen'
+
+function! CtagsGenerator()
+python3 << EOF
+
+import os
+import shutil
+import subprocess
+import sys
+
+ctag_path = shutil.which("ctags")
+if ctag_path is None:
+  sys.exit("It looks like you dont have ctags installed, please install it before continuing")
+
+git_folder_path = os.path.join(os.getcwd(), '.git')
+git_folder_path_exists = os.path.isdir(git_folder_path)
+if not git_folder_path_exists:
+  sys.exit('The git folder was not found on root, tags will not be generated')
+
+print('Generating tags')
+tag_file_path = os.path.join(git_folder_path, 'tags')
+tags_args = ['ctags', '-R', '-f', tag_file_path, '.']
+subprocess.run(tags_args)
+print('Tags generated successfully!')
+
+EOF
+endfunction
+
+command! GenerateTags call CtagsGenerator()
