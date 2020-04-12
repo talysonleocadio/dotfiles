@@ -73,19 +73,10 @@ augroup END
 
 " Key maps
 let mapleader = "\<Space>"
-map <silent> <leader>nt :NERDTreeToggle<CR>
-map <silent> <leader>sb :Buffers<CR>
-map <silent> <leader>bs :Startify<CR>
-map <silent> <leader>pi :PlugInstall<CR>
-map <silent> <leader>pc :PlugClean<CR>
-map <silent> <leader>d :noh<CR>
-map <C-t> :Files<CR>
 
 inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
-
-nnoremap <leader>mt :MundoToggle<CR>
 
 " Fzf_vim
 let $FZF_DEFAULT_COMMAND='rg --files --hidden --no-messages --glob="!{**/*.min.js,**/*.min.css,.git/*}"'
@@ -104,9 +95,6 @@ let g:ale_linters = {
 let g:ale_php_langserver_executable = $HOME.'/.config/composer/vendor/bin/php-language-server.php'
 let g:ale_php_phpmd_executable = $HOME.'/.config/composer/vendor/bin/phpmd'
 let g:ale_php_phpmd_ruleset = 'cleancode,codesize,unusedcode'
-
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " lightline
 let g:lightline = {
@@ -184,3 +172,45 @@ let g:gitgutter_grep='rg'
 highlight GitGutterAdd    guifg=#009900 guibg=#3c3836
 highlight GitGutterChange guifg=#bbbb00 guibg=#3c3836
 highlight GitGutterDelete guifg=#ff2222 guibg=#3c3836
+
+
+" Shortcuts definitions
+runtime plugin/shortcut.vim
+
+Shortcut 'Show shortcut menu and run chosen shortcut'
+      \ noremap <silent> <Space><Space> :Shortcuts<CR>
+Shortcut 'Fallback to shortcut menu on partial entry'
+      \ noremap <silent> <Space> :Shortcuts<CR>
+Shortcut 'Fzf: open file search and go to chosen file'
+      \ map <silent> <Space>ff :Files<CR>
+Shortcut 'Fzf: open gfiles search and go to chosen file'
+      \ map <silent> <Space>fg :GFiles<CR>
+Shortcut 'Fzf: open buffers search and go to choses buffer'
+      \ map <silent> <Space>sb :Buffers<CR>
+Shortcut 'Vim-plug: install new plugins'
+      \ noremap <silent> <Space>pi :PlugInstall<CR>
+Shortcut 'Vim-plug: remove unsable plugins'
+      \ noremap <silent> <Space>pc :PlugClean<CR>
+Shortcut 'Vim-plug: update all plugins plugins'
+      \ noremap <silent> <Space>pu :PlugUpdate<CR>
+Shortcut 'NERDTree: toggle navigation tree'
+      \ noremap <silent> <Space>nt :NERDTreeToggle<CR>
+Shortcut 'Startify: go back to main menu'
+      \ noremap <silent> <Space>bs :Startify<CR>
+Shortcut 'Clear highlight search'
+      \ map <silent> <C-l> :noh<CR>
+Shortcut 'Vim-mundo: Toggle undo tree'
+      \ map <silent> <Space>mt :MundoToggle<CR>
+Shortcut 'Tagbar: Toggle tagbar'
+      \ noremap <silent> <Space>tt :TagbarToggle<CR>
+Shortcut 'Ale: Go to next issue'
+      \ noremap <silent> <C-k> <Plug>(ale_previous_wrap)
+Shortcut 'Ale: Go to previous issue'
+      \ noremap <silent> <C-j> <Plug>(ale_next_wrap)
+Shortcut 'Source current file'
+      \ noremap <silent> <Space>sf :source %<CR>
+Shortcut! <C-]> 'Go to tag definition'
+Shortcut! <C-t> 'Jumpback from tag definition'
+Shortcut! <C-w>v 'Vertical split screen'
+Shortcut! <C-w>s 'Horizontal split screen'
+
