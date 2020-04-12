@@ -32,6 +32,10 @@ Plug 'morhetz/gruvbox'
 Plug 'simnalamburt/vim-mundo'
 Plug 'dbmrq/vim-ditto'
 Plug 'reedes/vim-pencil'
+Plug 'RRethy/vim-illuminate'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'majutsushi/tagbar'
+Plug 'sunaku/vim-shortcut'
 
 call plug#end()
 
