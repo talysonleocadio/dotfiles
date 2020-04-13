@@ -241,3 +241,6 @@ EOF
 endfunction
 
 command! GenerateTags call CtagsGenerator()
+
+"Gutentags options
+let g:gutentags_ctags_tagfile = '.git/tags'
