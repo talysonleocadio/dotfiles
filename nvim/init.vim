@@ -198,17 +198,15 @@ Shortcut 'NERDTree: toggle navigation tree'
 Shortcut 'Startify: go back to main menu'
       \ noremap <silent> <Space>bs :Startify<CR>
 Shortcut 'Clear highlight search'
-      \ map <silent> <C-l> :noh<CR>
+      \ noremap <silent> <C-l> :noh<CR>
 Shortcut 'Vim-mundo: Toggle undo tree'
-      \ map <silent> <Space>mt :MundoToggle<CR>
+      \ noremap <silent> <Space>mt :MundoToggle<CR>
 Shortcut 'Tagbar: Toggle tagbar'
       \ noremap <silent> <Space>tt :TagbarToggle<CR>
 Shortcut 'Ale: Go to next issue'
-      \ noremap <silent> <C-k> <Plug>(ale_previous_wrap)
+      \ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 Shortcut 'Ale: Go to previous issue'
-      \ noremap <silent> <C-j> <Plug>(ale_next_wrap)
-Shortcut 'Source current file'
-      \ noremap <silent> <Space>sf :source %<CR>
+      \ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 Shortcut! <C-]> 'Go to tag definition'
 Shortcut! <C-t> 'Jumpback from tag definition'
 Shortcut! <C-w>v 'Vertical split screen'
