@@ -210,7 +210,7 @@ Shortcut 'Ale: Go to previous issue'
 Shortcut 'Source the current file'
       \ noremap <silent> <Space>sf :source %<CR> :echo "The file have been sourced"<CR>
 Shortcut 'Fugitive: Akin to git status'
-      \ noremap <silent> <Space>gst :G<CR>
+      \ noremap <silent> <Space>gs :G<CR>
 Shortcut! <C-]> 'Go to tag definition'
 Shortcut! <C-t> 'Jumpback from tag definition'
 Shortcut! <C-w>v 'Vertical split screen'
