@@ -207,6 +207,8 @@ Shortcut 'Ale: Go to next issue'
       \ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 Shortcut 'Ale: Go to previous issue'
       \ nmap <silent> <C-j> <Plug>(ale_next_wrap)
+Shortcut 'Source the current file'
+      \ noremap <silent> <Space>sf :source %<CR> :echo "The file have been sourced"<CR>
 Shortcut! <C-]> 'Go to tag definition'
 Shortcut! <C-t> 'Jumpback from tag definition'
 Shortcut! <C-w>v 'Vertical split screen'
