@@ -246,3 +246,4 @@ command! GenerateTags call CtagsGenerator()
 
 "Gutentags options
 let g:gutentags_ctags_tagfile = '.git/tags'
+let g:gutentags_file_list_command = "rg --files --no-messages --glob='!{**/*.min.*,.git/*,**/*.html, **/*.map.*}'"
