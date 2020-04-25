@@ -12,6 +12,8 @@
 --exclude=min
 --exclude=lib
 --exclude=libs
+--exclude=gulp
+--exclude=plugins
 --exclude=__pycache__
 
 --exclude=*.html
