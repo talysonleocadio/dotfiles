@@ -80,6 +80,11 @@ inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
 " Fzf_vim
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --no-messages --glob="!{**/*.min.js,**/*.min.css,.git/*}"'
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit'
+\}
 
 " Ale
 let g:ale_linters_explicit = 1
