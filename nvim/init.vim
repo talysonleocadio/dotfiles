@@ -14,6 +14,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-abolish'
 Plug 'ap/vim-css-color'
+Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.vim'
 Plug 'maximbaz/lightline-ale'
@@ -255,3 +256,9 @@ let g:gutentags_file_list_command = "rg --files --no-messages --glob='!{**/*.min
 
 "Emmet options
 let g:user_emmet_leader_key=','
+
+"vim-polyglot options
+let g:polyglot_disabled = ['markdown']
+
+"vim-markdown options
+let g:vim_markdown_conceal = 0
