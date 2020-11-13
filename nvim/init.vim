@@ -40,6 +40,7 @@ Plug 'RRethy/vim-illuminate'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 Plug 'sunaku/vim-shortcut'
+Plug 'rhysd/git-messenger.vim'
 
 call plug#end()
 
