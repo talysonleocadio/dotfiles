@@ -59,6 +59,9 @@ set updatetime=100
 set inccommand=nosplit
 set title
 
+" Default python binary
+let g:python3_host_prog = '/usr/bin/python3'
+
 " Undo tree
 set undofile
 set undodir=~/.nvim/undo
