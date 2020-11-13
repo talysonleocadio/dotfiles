@@ -260,8 +260,5 @@ let g:gutentags_file_list_command = "rg --files --no-messages --glob='!{**/*.min
 "Emmet options
 let g:user_emmet_leader_key=','
 
-"vim-polyglot options
-let g:polyglot_disabled = ['markdown']
-
 "vim-markdown options
 let g:vim_markdown_conceal = 0
