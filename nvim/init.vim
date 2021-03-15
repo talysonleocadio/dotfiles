@@ -163,14 +163,6 @@ let g:lightline = {
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let g:EditorConfig_verbose = 1
 
-" Xclip copy/paste
-function! ClipboardYank()
-  call system('xclip -i -selection clipboard', @@)
-endfunction
-function! ClipboardPaste()
-  let @@ = system('xclip -o -selection clipboard')
-endfunction
-
 " vim-startify
 let g:startify_change_to_dir = 0
 let g:startify_bookmarks = [{'d': '~/.dotfiles/nvim/init.vim'}, {'z':'~/.dotfiles/zsh/.zshrc'}, {'i': '~/.dotfiles/i3/config'}]
@@ -182,9 +174,6 @@ let g:neosnippet#enable_completed_snippet = 1
 " identLine
 let g:indentLine_char = '▏'
 let g:indentLine_color_term = 239
-
-" Vim-MultipleCursors settings
-let g:multi_cursor_select_all_word_key = '<leader>na'
 
 " Gitgutter settings
 let g:gitgutter_sign_added = '+'
@@ -238,34 +227,6 @@ Shortcut! <C-]> 'Go to tag definition'
 Shortcut! <C-t> 'Jumpback from tag definition'
 Shortcut! <C-w>v 'Vertical split screen'
 Shortcut! <C-w>s 'Horizontal split screen'
-
-function! CtagsGenerator()
-python3 << EOF
-
-import os
-import shutil
-import subprocess
-import sys
-
-ctag_path = shutil.which("ctags")
-if ctag_path is None:
-  sys.exit("It looks like you dont have ctags installed, please install it before continuing")
-
-git_folder_path = os.path.join(os.getcwd(), '.git')
-git_folder_path_exists = os.path.isdir(git_folder_path)
-if not git_folder_path_exists:
-  sys.exit('The git folder was not found on root, tags will not be generated')
-
-print('Generating tags')
-tag_file_path = os.path.join(git_folder_path, 'tags')
-tags_args = ['ctags', '-R', '-f', tag_file_path, '.']
-subprocess.run(tags_args)
-print('Tags generated successfully!')
-
-EOF
-endfunction
-
-command! GenerateTags call CtagsGenerator()
 
 "Gutentags options
 let g:gutentags_ctags_tagfile = '.git/tags'
