@@ -7,7 +7,7 @@ Plug 'deoplete-plugins/deoplete-jedi', {'for': 'python'}" Python
 Plug 'Shougo/neco-vim', {'for': 'vim'}" Vim
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'} " Completion framework
 Plug 'editorconfig/editorconfig-vim'
-Plug 'Galooshi/vim-import-js', {'for': 'javscript'}
+Plug 'Galooshi/vim-import-js', {'for': 'javascript'}
 
 " Writing
 Plug 'dbmrq/vim-ditto'
