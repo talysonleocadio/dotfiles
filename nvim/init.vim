@@ -102,13 +102,17 @@ let g:fzf_action = {
 
 " Ale
 let g:ale_linters_explicit = 1
-let g:ale_fixers = {'javascript': ['eslint']}
+let g:ale_fixers = {
+  \ 'javascript': ['eslint'],
+  \ 'typescript': ['eslint'],
+  \ 'python': ['autoimport']
+\}
 let g:ale_linters = {
   \ 'javascript': ['eslint', 'tsserver'],
   \ 'python': ['flake8'],
   \ 'php': ['langserver', 'phpmd'],
   \ 'vim': ['vint'],
-  \ 'typescript': ['tslint']
+  \ 'typescript': ['eslint', 'tsserver']
 \}
 
 let g:ale_php_langserver_executable = $HOME.'/.config/composer/vendor/bin/php-language-server.php'
