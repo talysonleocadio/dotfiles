@@ -235,7 +235,7 @@ let g:gutentags_file_list_command = "rg --files --no-messages --glob='!{**/*.min
 "Emmet options
 let g:user_emmet_leader_key=','
 
-"vim-markdown options
+" vim-markdown options
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_conceal_code_blocks = 0
 let g:vim_markdown_folding_style_pythonic = 1
