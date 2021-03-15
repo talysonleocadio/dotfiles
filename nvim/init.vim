@@ -238,3 +238,7 @@ let g:user_emmet_leader_key=','
 " vim-markdown options
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_conceal_code_blocks = 0
+
+" nvim_typescript
+let g:nvim_typescript#diagnostics_enable = 0
+
