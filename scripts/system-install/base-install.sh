@@ -18,5 +18,6 @@ ln -sf ~/.dotfiles/albert/albert.conf ~/.config/albert
 ln -sf ~/.dotfiles/tmux/.tmux.conf ~/
 ln -sf ~/.dotfiles/zsh/.zshrc ~/
 ln -sf ~/.dotfiles/ripgrep/.ripgreprc ~/
+ln -sf ~/.dotfiles/git/.gitconfig ~/
 sudo cp ~/.dotfiles/g610/profile /etc/g810-led
 cp ~/.dotfiles/redshift/redshift.conf ~/.config/redshift
