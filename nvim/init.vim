@@ -1,44 +1,52 @@
 scriptencoding utf-8
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-zsh' }
-Plug 'junegunn/fzf.vim'
+" Code
+Plug 'mhartington/nvim-typescript', {'do': './install.sh', 'for': ['typescript', 'javascript']} " Typescript
+Plug 'deoplete-plugins/deoplete-jedi', {'for': 'python'}" Python
+Plug 'Shougo/neco-vim', {'for': 'vim'}" Vim
+Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'} " Completion framework
 Plug 'editorconfig/editorconfig-vim'
-Plug 'mattn/emmet-vim'
-Plug 'w0rp/ale'
-Plug 'itchyny/lightline.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'jiangmiao/auto-pairs'
-" Plug 'quramy/tsuquyomi'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-abolish'
-Plug 'ap/vim-css-color'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-Plug 'iamcco/markdown-preview.vim'
-Plug 'maximbaz/lightline-ale'
-Plug 'mhinz/vim-startify'
-Plug 'sheerun/vim-polyglot'
-Plug 'deoplete-plugins/deoplete-jedi'
-Plug 'Shougo/neco-vim'
-Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
-Plug 'ryanoasis/vim-devicons'
-" Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'Yggdroot/indentLine'
-Plug 'integralist/vim-mypy'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'airblade/vim-gitgutter'
-Plug 'morhetz/gruvbox'
-Plug 'simnalamburt/vim-mundo'
+Plug 'Galooshi/vim-import-js', {'for': 'javscript'}
+
+" Writing
 Plug 'dbmrq/vim-ditto'
 Plug 'reedes/vim-pencil'
+
+" Misc
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-zsh' }
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-abolish'
+Plug 'ryanoasis/vim-devicons'
+Plug 'Yggdroot/indentLine'
+Plug 'simnalamburt/vim-mundo'
 Plug 'RRethy/vim-illuminate'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 Plug 'sunaku/vim-shortcut'
+Plug 'itchyny/lightline.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'jiangmiao/auto-pairs'
+Plug 'iamcco/markdown-preview.vim'
+Plug 'maximbaz/lightline-ale'
+Plug 'mhinz/vim-startify'
+Plug 'mattn/emmet-vim'
+
+" Syntax helpers
+Plug 'sheerun/vim-polyglot'
+
+" Linters
+Plug 'dense-analysis/ale'
+
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 Plug 'rhysd/git-messenger.vim'
+
+" Colorschemes
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
