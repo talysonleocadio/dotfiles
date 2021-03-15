@@ -62,7 +62,7 @@ set completeopt-=preview
 set autoindent
 set smartindent
 set termguicolors
-set updatetime=100
+set updatetime=300
 set inccommand=nosplit
 set title
 
