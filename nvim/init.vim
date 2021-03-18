@@ -8,7 +8,7 @@ Plug 'Shougo/neco-vim', {'for': 'vim'}" Vim
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'} " Completion framework
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Galooshi/vim-import-js', {'for': 'javascript'}
-Plug 'Chiel92/vim-autoformat'
+Plug 'Chiel92/vim-autoformat' " Code formatting
 
 " Writing
 Plug 'dbmrq/vim-ditto'
@@ -244,5 +244,5 @@ let g:vim_markdown_conceal_code_blocks = 0
 let g:nvim_typescript#diagnostics_enable = 0
 
 " vim-autoformat
-let g:formatdef_tidy_only_body_formatter = '"tidy -q -mi --show-errors 0 --show-warnings 0 --show-body-only yes -wrap 0"'
+let g:formatdef_tidy_only_body_formatter = '"tidy -q -mi --show-errors 0 --show-warnings 0 --show-body-only yes -wrap 0"' " Install tidy via package manager
 let g:formatters_html = ['tidy_only_body_formatter']
