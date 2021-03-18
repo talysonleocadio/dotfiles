@@ -2,11 +2,11 @@ scriptencoding utf-8
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Code
-Plug 'mhartington/nvim-typescript', {'do': './install.sh', 'for': ['typescript', 'javascript']} " Typescript
-Plug 'deoplete-plugins/deoplete-jedi', {'for': 'python'}" Python
-Plug 'Shougo/neco-vim', {'for': 'vim'}" Vim
+Plug 'mhartington/nvim-typescript', {'do': './install.sh', 'for': ['typescript', 'javascript']} " Typescript support
+Plug 'deoplete-plugins/deoplete-jedi', {'for': 'python'} " Python
+Plug 'Shougo/neco-vim', {'for': 'vim'} " Vim linter
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'} " Completion framework
-Plug 'editorconfig/editorconfig-vim'
+Plug 'editorconfig/editorconfig-vim' " Editorconfig for vim
 Plug 'Galooshi/vim-import-js', {'for': 'javascript'}
 Plug 'Chiel92/vim-autoformat' " Code formatting
 
