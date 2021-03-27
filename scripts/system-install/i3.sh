@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 log "Instalações necessárias para o i3"
 $yay i3-gaps xcompton xautolock
 

@@ -237,8 +237,8 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym XF86MonBrightnessUp   exec xbacklight -inc 10
 
 # App shortcuts
-bindsym $mod+w exec "/usr/bin/chromium"
-bindsym Print exec "/usr/bin/spectacle"
+bindsym $mod+w exec "/usr/bin/env chromium"
+bindsym Print exec "/usr/bin/env spectacle"
 
 # Moving through workspaces
 bindsym $mod+Tab workspace next
