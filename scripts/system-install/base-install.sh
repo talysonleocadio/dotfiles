@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 log "Otimização dos mirrors"
 $update && $install reflector
 sudo reflector --protocol https --sort score --latest 5 --save /etc/pacman.d/mirrorlist
