@@ -6,7 +6,7 @@ Plug 'mhartington/nvim-typescript', {'do': './install.sh', 'for': ['typescript',
 Plug 'deoplete-plugins/deoplete-jedi', {'for': 'python'} " Python
 Plug 'Shougo/neco-vim', {'for': 'vim'} " Vim linter
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'} " Completion framework
-Plug 'editorconfig/editorconfig-vim' " Editorconfig for vim
+Plug 'editorconfig/editorconfig-vim' " Editorconfig for (neo)vim
 Plug 'Galooshi/vim-import-js', {'for': 'javascript'}
 Plug 'Chiel92/vim-autoformat' " Code formatting
 
@@ -22,18 +22,18 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-abolish'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
-Plug 'simnalamburt/vim-mundo'
+Plug 'simnalamburt/vim-mundo', {'on': 'MundoToggle'} " Undo tree visualization
 Plug 'RRethy/vim-illuminate'
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'} " See all tags of the current file
 Plug 'sunaku/vim-shortcut'
 Plug 'itchyny/lightline.vim'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'} " File explorer
 Plug 'jiangmiao/auto-pairs'
-Plug 'iamcco/markdown-preview.vim'
+Plug 'iamcco/markdown-preview.vim', {'for': 'markdown'}
 Plug 'maximbaz/lightline-ale'
 Plug 'mhinz/vim-startify'
-Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim', {'for': 'html'}
 
 " Syntax helpers
 Plug 'sheerun/vim-polyglot'
