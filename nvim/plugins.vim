@@ -141,7 +141,7 @@ Shortcut 'Ale: Go to previous issue'
 Shortcut 'Source the current file'
       \ noremap <silent> <Space>sf :source %<CR> :echo "The file have been sourced"<CR>
 Shortcut 'Fugitive: Akin to git status'
-      \ noremap <silent> <Space>gs :G<CR>
+      \ noremap <silent> <Space>g :G<CR>
 Shortcut 'Format code'
       \ noremap <silent> <Space>af :Autoformat<CR>
 Shortcut 'Open terminal'
