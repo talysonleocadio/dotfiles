@@ -27,12 +27,12 @@ syntax enable
 colorscheme gruvbox
 
 " Autocommands
-augroup cleaningTrailingSpaces
+augroup CleaningTrailingSpaces
   autocmd!
   autocmd BufWrite * %s/\s\+$//e
 augroup END
 
-augroup writter
+augroup Writter
   autocmd!
   autocmd FileType markdown,text call pencil#init({'wrap': 'soft'})
                             \ | DittoOn
