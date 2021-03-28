@@ -43,3 +43,17 @@ augroup TerminalInitialization
   autocmd TermOpen * setlocal nonumber norelativenumber | :startinsert
 augroup END
 
+" Global functions
+function! OpenTerminal()
+  setlocal splitright
+  setlocal splitbelow
+
+  if executable('zsh')
+    split term://zsh
+  else
+    split term://bash
+  endif
+
+  resize 20
+
+endfunction
