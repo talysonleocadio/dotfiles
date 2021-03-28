@@ -37,3 +37,9 @@ augroup Writter
   autocmd FileType markdown,text call pencil#init({'wrap': 'soft'})
                             \ | DittoOn
 augroup END
+
+augroup TerminalInitialization
+  autocmd!
+  autocmd TermOpen * setlocal nonumber norelativenumber | :startinsert
+augroup END
+
