@@ -29,6 +29,7 @@ Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'} " See all tags of the current f
 Plug 'sunaku/vim-shortcut'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'} " File explorer
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight', {'on': ['NERDTreeToggle', 'NERDTreeFind']} " File explorer sintax hightlight
 Plug 'jiangmiao/auto-pairs'
 Plug 'iamcco/markdown-preview.vim', {'for': 'markdown'}
 Plug 'maximbaz/lightline-ale'
