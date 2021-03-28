@@ -112,6 +112,8 @@ Shortcut 'Fzf: open file search and go to chosen file'
       \ map <silent> <Space>ff :Files<CR>
 Shortcut 'Fzf: open gfiles search and go to chosen file'
       \ map <silent> <Space>fg :GFiles<CR>
+Shortcut 'Fzf: open Rg search and go to chosen file with the corresponding pattern'
+      \ map <silent> <Space>rg :Rg<CR>
 Shortcut 'Fzf: open buffers search and go to choses buffer'
       \ map <silent> <Space>sb :Buffers<CR>
 Shortcut 'Vim-plug: install new plugins'
@@ -122,6 +124,8 @@ Shortcut 'Vim-plug: update all plugins plugins'
       \ noremap <silent> <Space>pu :PlugUpdate<CR>
 Shortcut 'NERDTree: toggle navigation tree'
       \ noremap <silent> <Space>nt :NERDTreeToggle<CR>
+Shortcut 'NERDTree: find and open the current file in navigation tree'
+      \ noremap <silent> <Space>nf :NERDTreeFind<CR>
 Shortcut 'Startify: go back to main menu'
       \ noremap <silent> <Space>bs :Startify<CR>
 Shortcut 'Clear highlight search'
@@ -140,6 +144,8 @@ Shortcut 'Fugitive: Akin to git status'
       \ noremap <silent> <Space>gs :G<CR>
 Shortcut 'Format code'
       \ noremap <silent> <Space>af :Autoformat<CR>
+Shortcut 'Open terminal'
+      \ noremap <silent> <Space>to :call OpenTerminal()<CR>
 Shortcut! <C-]> 'Go to tag definition'
 Shortcut! <C-t> 'Jumpback from tag definition'
 Shortcut! <C-w>v 'Vertical split screen'
