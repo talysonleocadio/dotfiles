@@ -73,7 +73,14 @@ let g:EditorConfig_verbose = 1
 
 " vim-startify
 let g:startify_change_to_dir = 0
-let g:startify_bookmarks = [{'n': '~/.dotfiles/nvim/init.vim'}, {'z':'~/.dotfiles/zsh/.zshrc'}, {'i': '~/.dotfiles/i3/config'}]
+let g:startify_bookmarks = [
+  \ {'b': '~/.dotfiles/nvim/base.vim'},
+  \ {'i': '~/.dotfiles/i3/config'},
+  \ {'m': '~/.dotfiles/nvim/mappings.vim'},
+  \ {'n': '~/.dotfiles/nvim/init.vim'},
+  \ {'p': '~/.dotfiles/nvim/plugins.vim'},
+  \ {'z':'~/.dotfiles/zsh/.zshrc'},
+  \ ]
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
