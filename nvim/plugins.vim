@@ -171,3 +171,11 @@ let g:formatters_html = ['tidy_only_body_formatter']
 
 " Gruvbox
 let g:gruvbox_italic = 1
+
+" NERDTree
+
+augroup CloseNvimIfNERDTreeIsTheOnlyWindowLeft
+  autocmd!
+  autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+      \ quit | endif
+augroup END
