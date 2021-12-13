@@ -173,9 +173,18 @@ let g:formatters_html = ['tidy_only_body_formatter']
 let g:gruvbox_italic = 1
 
 " NERDTree
-
 augroup CloseNvimIfNERDTreeIsTheOnlyWindowLeft
   autocmd!
   autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
       \ quit | endif
 augroup END
+
+" Vimwiki
+let g:vimwiki_list = [{'path': '~/.vimwiki'}, {'path': '~/.waywiki', 'auto_diary_index': 1}]
+
+let g:vimwiki_diary_months = {
+      \ 1: 'Janeiro', 2: 'Fevereiro', 3: 'Março',
+      \ 4: 'Abril', 5: 'Maio', 6: 'Junho',
+      \ 7: 'Julho', 8: 'Agosto', 9: 'Setembro',
+      \ 10: 'Outubro', 11: 'Novembro', 12: 'Dezembro'
+      \ }

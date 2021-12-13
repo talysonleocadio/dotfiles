@@ -35,6 +35,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'maximbaz/lightline-ale'
 Plug 'mhinz/vim-startify'
 Plug 'mattn/emmet-vim', {'for': 'html'}
+Plug 'vimwiki/vimwiki'
 
 " Syntax helpers
 Plug 'sheerun/vim-polyglot'
