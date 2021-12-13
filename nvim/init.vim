@@ -31,7 +31,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree', {'on': ['NERDTreeToggle', 'NERDTreeFind']} " File explorer
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight', {'on': ['NERDTreeToggle', 'NERDTreeFind']} " File explorer sintax hightlight
 Plug 'jiangmiao/auto-pairs'
-Plug 'iamcco/markdown-preview.vim', {'for': 'markdown'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'maximbaz/lightline-ale'
 Plug 'mhinz/vim-startify'
 Plug 'mattn/emmet-vim', {'for': 'html'}
