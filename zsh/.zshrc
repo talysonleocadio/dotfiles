@@ -135,10 +135,7 @@ export FZF_CTRL_T_OPTS='--preview "bat {} | head -20"'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export EDITOR="nvim"
-export PYTHONBREAKPOINT=ipdb.set_trace
 
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
-. /home/talyson/.asdf/asdf.sh
