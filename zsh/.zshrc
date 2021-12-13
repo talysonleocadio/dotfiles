@@ -86,7 +86,6 @@ plugins=(
   poetry
   tmux
   zsh-autosuggestions
-  zsh_reload
   zsh-syntax-highlighting
 )
 
