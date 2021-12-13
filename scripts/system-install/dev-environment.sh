@@ -6,9 +6,6 @@ $yay nodejs-n
 log "PYTHON: Flake8, pynvim e ipdb"
 pip install --user flake8 pynvim poetry ipdb
 
-log "VIM: Linter pra vim"
-pip install vim-vint
-
 log "NODE: Instalação da última versão LTS"
 sudo n lts
 
