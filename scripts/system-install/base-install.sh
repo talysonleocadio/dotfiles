@@ -11,7 +11,7 @@ cd .. && rm -rf yay
 logs "Instalação de programas presentes no AUR"
 $yay g810-led-git nerd-fonts-hack albert
 
-log "Criação de pastas para as confs do redshift"
+logs "Criação de pastas para as confs do redshift"
 mkdir -p ~/.config/{redshift,albert,i3,i3status}
 
 logs "Symlinks dos programas base do sistema"

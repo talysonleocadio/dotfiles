@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
-log "DEV-ENV: pip e nodejs"
-$install python-pip nodejs
+logs "DEV-ENV: pip e nodejs"
+$install python nodejs
 
-log "PYTHON: Flake8, pynvim e ipdb"
+curl -sSL https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
+python get-pip.py
+rm get-pip.py
+
+logs "PYTHON: Flake8, pynvim e ipdb"
 pip install --user flake8 pynvim poetry ipdb ipython pyclip
 
-log "JS: Instalação do Eslint, TS e yarn"
+logs "JS: Instalação do Eslint, TS e yarn"
 sudo npm i -g eslint typescript yarn

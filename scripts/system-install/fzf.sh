@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-log "FZF"
+logs "FZF"
 
 if [ -d "$HOME/.fzf" ]; then
     rm -rf $HOME/.fzf
