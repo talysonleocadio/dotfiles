@@ -5,3 +5,5 @@
 	defaultBranch = main
 [user]
 	name = Talyson Leocádio
+[includeIf "gitdir:~/Waycarbon/"]
+  path = .gitconfig-trampo
