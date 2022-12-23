@@ -28,9 +28,6 @@ hide_edge_borders both
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec konsole
-
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -179,29 +176,32 @@ bar {
     separator #757575
     #                  border             background         text
     focused_workspace  $bg-color          $bg-color          $text-color
-      inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-      urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+    urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
   }
 }
 
 # -------------- BEGIN OF PLASMA INTEGRATION --------------
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
 
 # Don’t treat Plasma pop-ups as full-sized windows
 for_window [class="plasmashell"] floating enable
 
 # Don’t spawn an empty window for the Plasma Desktop
 exec --no-startup-id wmctrl -c Plasma
-for_window [title="Desktop — Plasma"] kill, floating enable, border none
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
+
+for_window [title="plasma-desktop"] floating enable; border none
+
+for_window [class="Plasma"] floating enable; border none
+for_window [class="kcalc"] floating enable; border none
+for_window [class="systemsettings"] floating enable; border none
+for_window [class="dolphin"] floating enable; border none
 
 # Don’t let notifications and non-interactive pop-up windows steal focus
 no_focus [class="plasmashell" window_type="notification"]
-no_focus [class="plasmashell" window_type="on_screen_display"]
-
-# for_window [class="plasmashell" window_type="notification"] move position 1560px 950px
-for_window [title="plasma-desktop"] floating enable, border none
-
 # -------------- END OF PLASMA INTEGRATION --------------
-
 
 ## Multimedia Keys
 
@@ -216,10 +216,10 @@ for_window [title="plasma-desktop"] floating enable, border none
 # mute
 # bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
 
-#bindsym XF86AudioPlay exec playerctl play
-#bindsym XF86AudioPause exec playerctl pause
-#bindsym XF86AudioNext exec playerctl next
-#bindsym XF86AudioPrev exec playerctl previous
+# bindsym XF86AudioPlay exec playerctl play
+# bindsym XF86AudioPause exec playerctl pause
+# bindsym XF86AudioNext exec playerctl next
+# bindsym XF86AudioPrev exec playerctl previous
 
 # bindsym XF86AudioPlay exec mocp --toggle-pause
 # bindsym XF86AudioPause exec mocp --toggle-pause
@@ -239,6 +239,7 @@ bindsym XF86MonBrightnessUp   exec xbacklight -inc 10
 # App shortcuts
 bindsym $mod+w exec "/usr/bin/env chromium"
 bindsym Print exec "/usr/bin/env spectacle"
+bindsym $mod+Return exec "/usr/bin/env konsole"
 
 # Moving through workspaces
 bindsym $mod+Tab workspace next
@@ -248,5 +249,4 @@ bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
 
 exec --no-startup-id xautolock -time 5 -locker "loginctl lock-session"
-exec --no-startup-id compton --config ~/.dotfiles/compton/compton.conf
-exec --no-startup-id feh --bg-scale ~/.dotfiles/wallpaper/zen-of-python.png
+exec --no-startup-id feh --bg-scale ~/.dotfiles/wallpaper/black.jpg
