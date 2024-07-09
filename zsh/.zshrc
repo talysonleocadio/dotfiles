@@ -138,3 +138,9 @@ export EDITOR="nvim"
 
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
+# Use ESC to edit the current command line:
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^[OQ' edit-command-line
+
+source ~/.work-stuff.zsh
